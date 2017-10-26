@@ -1,11 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:src="@drawable/ic_logo"
+        android:contentDescription="@null"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/dimen_72dp"
+        android:layout_marginBottom="@dimen/small"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Home"/>
+        android:padding="@dimen/small"
+        android:background="@drawable/bg_edittext_search"
+        android:layout_margin="@dimen/normal"
+        android:gravity="center">
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_search"
+            android:layout_marginStart="@dimen/mini"
+            android:layout_marginEnd="@dimen/mini"/>
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/hint_search"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginStart="@dimen/small"
+            android:layout_marginEnd="@dimen/small"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/normal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/new_forest"
+            android:contentDescription="@null"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:layout_height="match_parent"
+            android:src="@drawable/html_3"
+            android:contentDescription="@null"
+            android:layout_marginStart="@dimen/mini"
+            android:layout_marginEnd="@dimen/mini"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:layout_height="match_parent"
+            android:src="@drawable/html"
+            android:contentDescription="@null"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/normal"
+        android:layout_marginEnd="@dimen/normal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"
+            android:src="@drawable/book"
+            android:contentDescription="@null"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:layout_height="match_parent"
+            android:src="@drawable/galaxy"
+            android:contentDescription="@null"
+            android:layout_marginStart="@dimen/mini"
+            android:layout_marginEnd="@dimen/mini"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:layout_height="match_parent"
+            android:src="@drawable/html"
+            android:contentDescription="@null"/>
+
+    </LinearLayout>
+
 </LinearLayout>

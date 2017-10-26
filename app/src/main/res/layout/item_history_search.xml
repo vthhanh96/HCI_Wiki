@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingTop="@dimen/small"
+        android:paddingBottom="@dimen/small"
+        android:paddingStart="@dimen/normal"
+        android:paddingEnd="@dimen/normal">
+
+        <TextView
+            android:id="@+id/tv_search_history"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/white"/>
+
+        <View
+            android:id="@+id/view_delete_search_history"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/ic_delete"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_margin"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/item_bottom_bar_selected_color"/>
+</LinearLayout>

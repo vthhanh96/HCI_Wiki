@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.honghanh.hci_wiki.SearchActivity"
+    android:background="@drawable/bg_app"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/view_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_back"
+            android:layout_marginEnd="@dimen/small"
+            android:layout_marginRight="@dimen/small"/>
+
+        <EditText
+            android:id="@+id/edt_search"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint_search"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:backgroundTint="@color/white"
+            android:inputType="text"
+            android:maxLines="1"/>
+
+        <ImageView
+            android:id="@+id/img_delete_search"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_delete"
+            android:layout_marginEnd="@dimen/small"
+            android:layout_marginRight="@dimen/small"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_no_history_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_search"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/what_are_you_looking_for"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/small"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_history"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/normal"
+        android:layout_marginEnd="@dimen/normal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/recent_history"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rcv_search_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/normal"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_no_results"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="100dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/no_search"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_results_message"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/large"
+            android:layout_marginEnd="@dimen/large"
+            android:layout_marginTop="@dimen/normal"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

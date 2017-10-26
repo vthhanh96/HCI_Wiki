@@ -1,4 +1,4 @@
-package com.example.honghanh.hci_wiki;
+package com.example.honghanh.hci_wiki.adapter;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -11,7 +11,6 @@ import com.example.honghanh.hci_wiki.fragments.PageFragment;
 import com.example.honghanh.hci_wiki.fragments.SettingsFragment;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
-
 
     public ViewPagerAdapter(FragmentManager fm) {
         super(fm);

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 
+import com.example.honghanh.hci_wiki.adapter.ViewPagerAdapter;
 import com.example.honghanh.hci_wiki.widgets.NonSwipeViewPager;
 
 public class MainActivity extends AppCompatActivity {
