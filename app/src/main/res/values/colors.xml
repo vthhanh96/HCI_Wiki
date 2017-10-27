@@ -7,4 +7,5 @@
     <color name="bottom_bar_color">#7bbdff</color>
     <color name="item_bottom_bar_selected_color">#0c6afa</color>
     <color name="white">#FFF</color>
+    <color name="black">#000</color>
 </resources>

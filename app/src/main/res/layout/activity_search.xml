@@ -10,16 +10,16 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:gravity="center"
         android:orientation="horizontal">
 
-        <View
-            android:id="@+id/view_back"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@drawable/ic_back"
-            android:layout_marginEnd="@dimen/small"
-            android:layout_marginRight="@dimen/small"/>
+            android:layout_marginEnd="@dimen/normal"
+            android:layout_marginStart="@dimen/normal"
+            android:layout_gravity="center"/>
 
         <EditText
             android:id="@+id/edt_search"
@@ -31,16 +31,22 @@
             android:textColorHint="@color/white"
             android:backgroundTint="@color/white"
             android:inputType="text"
-            android:maxLines="1"/>
+            android:maxLines="1"
+            android:imeOptions="actionDone"
+            android:layout_gravity="center"/>
 
         <ImageView
             android:id="@+id/img_delete_search"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:contentDescription="@null"
             android:src="@drawable/ic_delete"
+            android:paddingStart="@dimen/small"
+            android:paddingEnd="@dimen/small"
             android:layout_marginEnd="@dimen/small"
-            android:layout_marginRight="@dimen/small"/>
+            android:layout_marginRight="@dimen/small"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="@dimen/normal"/>
     </LinearLayout>
 
     <LinearLayout
@@ -117,7 +123,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/no_results_message"
-            android:textSize="24sp"
+            android:textSize="20sp"
             android:textColor="@color/white"
             android:layout_marginStart="@dimen/large"
             android:layout_marginEnd="@dimen/large"

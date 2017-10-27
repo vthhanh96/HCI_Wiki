@@ -4,4 +4,23 @@
     <string name="what_are_you_looking_for">What are you looking for?</string>
     <string name="recent_history">Recent history</string>
     <string name="no_results_message">Sorry!\nThere are no matching results for the text you have entered.\nPlease try again!</string>
+
+    <string name="animal_content">Animals are eukaryotic, multicellular organisms that form the biological kingdom Animalia.
+        With few exceptions, animals are motile (able to move), heterotrophic (consume organic material), reproduce sexually, and their embryonic development includes a blastula stage.
+        The body plan of the animal derives from this blastula, differentiating specialized tissues and organs as it develops;
+        this plan eventually becomes fixed, although some undergo metamorphosis at some stage in their lives.\n\n
+        Zoology is the study of animals.
+        Currently there are over 66 thousand (less than 5% of all animals) vertebrate species, and over 1.3 million (over 95% of all animals) invertebrate species in existence.
+        Classification of animals into groups (taxonomy) is accomplished using either the hierarchical Linnaean system;
+        or cladistics, which displays diagrams (phylogenetic trees) called cladograms to show relationships based on the evolutionary principle of the most recent common ancestor.
+        Some recent classifications based on modern cladistics have explicitly abandoned the term "kingdom", noting that the traditional kingdoms are not monophyletic, i.e., do not consist of all the descendants of a common ancestor.\n\n
+        Animals are divided by body plan into vertebrates and invertebrates.
+        Vertebrates—fishes, amphibians, reptiles, birds, and mammals—have a vertebral column (spine); invertebrates do not. All vertebrates and most invertebrates are bilaterally symmetrical (Bilateria).
+        These invertebrates include arthropods, molluscs, roundworms, ringed worms, flatworms, and other phyla in Ecdysozoa and Spiralia. Echinoderm larvae are initially bilaterally symmetrical, but later as adults develop radial symmetry;
+        Cnidarians are radially symmetrical; ctenophores are biradially symmetrical; and sponges have no symmetry.\n\n
+        Animal phyla appeared in the fossil record as marine species during the Cambrian explosion, about 542 million years ago. Animals emerged as a clade within Apoikozoa as the sister group to the choanoflagellates.
+    </string>
+    <string name="search">Search</string>
+    <string name="page">Page</string>
+    <string name="more">More</string>
 </resources>

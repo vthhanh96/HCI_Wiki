@@ -12,18 +12,20 @@
         android:paddingStart="@dimen/normal"
         android:paddingEnd="@dimen/normal">
 
-        <TextView
-            android:id="@+id/tv_search_history"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textColor="@color/white"/>
-
         <View
-            android:id="@+id/view_delete_search_history"
-            android:layout_width="@dimen/normal"
-            android:layout_height="@dimen/normal"
-            android:background="@drawable/ic_delete"/>
+            android:id="@+id/view_img_data"
+            android:layout_width="40dp"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/tv_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:layout_marginStart="@dimen/normal"
+            android:layout_marginEnd="@dimen/normal"/>
+
     </LinearLayout>
 
     <View
