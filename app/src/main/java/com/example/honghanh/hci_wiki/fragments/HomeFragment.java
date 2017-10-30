@@ -7,10 +7,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 import android.widget.TextView;
 
 import com.example.honghanh.hci_wiki.R;
 import com.example.honghanh.hci_wiki.SearchActivity;
+import com.example.honghanh.hci_wiki.adapter.RecentSearchAdapter;
 
 
 public class HomeFragment extends Fragment {
@@ -38,5 +40,8 @@ public class HomeFragment extends Fragment {
                 getContext().startActivity(intent);
             }
         });
+
+        GridView grvRecentSearch = (GridView) view.findViewById(R.id.grv_recent_search);
+        grvRecentSearch.setAdapter(new RecentSearchAdapter(getContext()));
     }
 }

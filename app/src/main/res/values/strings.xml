@@ -23,4 +23,6 @@
     <string name="search">Search</string>
     <string name="page">Page</string>
     <string name="more">More</string>
+    <string name="forest">Forest</string>
+    <string name="book">Book</string>
 </resources>
