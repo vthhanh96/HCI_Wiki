@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#0c6afa</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#ece5e0</color>
+    <color name="colorPrimaryDark">#5d5d5d</color>
+    <color name="colorAccent">#FFFF</color>
 
-    <color name="bottom_bar_color">#7bbdff</color>
-    <color name="item_bottom_bar_selected_color">#0c6afa</color>
     <color name="white">#FFF</color>
     <color name="black">#000</color>
 </resources>

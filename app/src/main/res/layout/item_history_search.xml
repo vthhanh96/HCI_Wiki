@@ -17,18 +17,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/white"/>
+            android:textColor="@color/black"/>
 
         <View
             android:id="@+id/view_delete_search_history"
             android:layout_width="@dimen/normal"
             android:layout_height="@dimen/normal"
-            android:background="@drawable/ic_delete"/>
+            android:background="@drawable/ic_delete_dark"/>
     </LinearLayout>
 
     <View
         android:id="@+id/view_margin"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/item_bottom_bar_selected_color"/>
+        android:background="@color/colorPrimaryDark"
+        android:layout_marginStart="@dimen/normal"
+        android:layout_marginEnd="@dimen/normal"/>
 </LinearLayout>

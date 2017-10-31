@@ -6,8 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
 
 import com.example.honghanh.hci_wiki.R;
+import com.example.honghanh.hci_wiki.adapter.BookmarkAdapter;
 
 
 public class BookmarkFragment extends Fragment {
@@ -21,5 +23,13 @@ public class BookmarkFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_bookmark, container, false);
+    }
+
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        GridView grvBookmark = (GridView) view.findViewById(R.id.grv_bookmark);
+        grvBookmark.setAdapter(new BookmarkAdapter(getContext()));
     }
 }

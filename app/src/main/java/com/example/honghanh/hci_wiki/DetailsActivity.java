@@ -62,7 +62,7 @@ public class DetailsActivity extends AppCompatActivity implements OnMenuItemClic
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
                 if (Math.abs(verticalOffset) == appBarLayout.getTotalScrollRange()) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                        toolbar.setBackground(getResources().getDrawable(R.drawable.bg_toolbar));
+                        toolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                     }
                 } else if (toolbar.getBackground() != null) {
                     toolbar.setBackgroundColor(Color.TRANSPARENT);
@@ -117,31 +117,31 @@ public class DetailsActivity extends AppCompatActivity implements OnMenuItemClic
 
         MenuObject close = new MenuObject();
         close.setResource(R.drawable.ic_delete);
-        close.setBgColor(getResources().getColor(R.color.bottom_bar_color));
+        close.setBgColor(getResources().getColor(R.color.colorPrimaryDark));
 
         MenuObject fontSize = new MenuObject("Font size");
         fontSize.setResource(R.drawable.ic_font_size);
-        fontSize.setBgColor(getResources().getColor(R.color.bottom_bar_color));
+        fontSize.setBgColor(getResources().getColor(R.color.colorPrimaryDark));
 
         MenuObject bookmark = new MenuObject("Bookmark");
         bookmark.setResource(R.drawable.ic_bookmark);
-        bookmark.setBgColor(getResources().getColor(R.color.bottom_bar_color));
+        bookmark.setBgColor(getResources().getColor(R.color.colorPrimaryDark));
 
         MenuObject share = new MenuObject("Share");
         share.setResource(R.drawable.ic_share);
-        share.setBgColor(getResources().getColor(R.color.bottom_bar_color));
+        share.setBgColor(getResources().getColor(R.color.colorPrimaryDark));
 
         MenuObject newTab = new MenuObject("New tab");
         newTab.setResource(R.drawable.ic_new_tab);
-        newTab.setBgColor(getResources().getColor(R.color.bottom_bar_color));
+        newTab.setBgColor(getResources().getColor(R.color.colorPrimaryDark));
 
         MenuObject addHome = new MenuObject("Add to home");
         addHome.setResource(R.drawable.ic_add_to_home);
-        addHome.setBgColor(getResources().getColor(R.color.bottom_bar_color));
+        addHome.setBgColor(getResources().getColor(R.color.colorPrimaryDark));
 
         MenuObject history = new MenuObject("History");
         history.setResource(R.drawable.ic_history);
-        history.setBgColor(getResources().getColor(R.color.bottom_bar_color));
+        history.setBgColor(getResources().getColor(R.color.colorPrimaryDark));
 
         menuObjects.add(close);
         menuObjects.add(fontSize);

@@ -10,7 +10,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@color/colorPrimaryDark">
 
         <ImageView
             android:id="@+id/img_back"
@@ -19,7 +20,8 @@
             android:background="@drawable/ic_back"
             android:layout_marginEnd="@dimen/normal"
             android:layout_marginStart="@dimen/normal"
-            android:layout_gravity="center"/>
+            android:layout_gravity="center"
+            android:contentDescription="@null"/>
 
         <EditText
             android:id="@+id/edt_search"
@@ -61,7 +63,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@null"
-            android:src="@drawable/ic_search"
+            android:src="@drawable/ic_search_dark"
             android:layout_gravity="center"/>
 
         <TextView
@@ -69,7 +71,7 @@
             android:layout_height="wrap_content"
             android:text="@string/what_are_you_looking_for"
             android:textSize="24sp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_margin="@dimen/small"
             android:layout_gravity="center"/>
     </LinearLayout>
@@ -87,8 +89,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/recent_history"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="16sp"
+            android:layout_marginTop="@dimen/small"
             android:layout_gravity="center_horizontal"/>
 
         <android.support.v7.widget.RecyclerView
@@ -124,7 +127,7 @@
             android:layout_height="wrap_content"
             android:text="@string/no_results_message"
             android:textSize="20sp"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:layout_marginStart="@dimen/large"
             android:layout_marginEnd="@dimen/large"
             android:layout_marginTop="@dimen/normal"

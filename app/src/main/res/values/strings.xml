@@ -25,4 +25,17 @@
     <string name="more">More</string>
     <string name="forest">Forest</string>
     <string name="book">Book</string>
+    <string name="today">Today</string>
+    <string name="clear_all">Clear all</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="language">Language</string>
+    <string name="english">English</string>
+    <string name="general">General</string>
+    <string name="theme">Theme</string>
+    <string name="blue">Blue</string>
+    <string name="introduce">Introduce</string>
+    <string name="introduce_about_wiki">Introduce about Wiki</string>
+    <string name="terms_and_services">Terms and services</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="no_pages">No Pages!</string>
 </resources>

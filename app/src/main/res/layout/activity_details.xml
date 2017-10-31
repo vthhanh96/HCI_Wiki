@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             app:collapsedTitleGravity="left"
-            app:contentScrim="@color/bottom_bar_color"
+            app:contentScrim="@color/colorPrimaryDark"
             app:expandedTitleGravity="left|bottom"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:fitsSystemWindows="true"
@@ -41,7 +41,7 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#802D2D2D"/>
+                    android:background="#80000000"/>
             </FrameLayout>
 
             <android.support.v7.widget.Toolbar
