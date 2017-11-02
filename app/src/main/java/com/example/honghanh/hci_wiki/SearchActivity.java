@@ -147,6 +147,7 @@ public class SearchActivity extends AppCompatActivity {
             @Override
             public void onItemClick(int position) {
                 edtSearch.setText(mListHistory.get(position));
+                edtSearch.setSelection(edtSearch.getText().length());
             }
         });
 
@@ -177,7 +178,6 @@ public class SearchActivity extends AppCompatActivity {
             intent.putExtra(KEY_CONTENT_DATA, mListSearchData.get(0));
             startActivity(intent);
         }
-        finish();
     }
 
     private void updateListHistory() {
@@ -215,16 +215,11 @@ public class SearchActivity extends AppCompatActivity {
         mListAllData = new ArrayList<>();
 
         mListAllData.add(new Data("Animal", "animal.jpg", getString(R.string.animal_content)));
-        mListAllData.add(new Data("Book", "book.jpg", ""));
-        mListAllData.add(new Data("Flower", "flower.jpg", ""));
-        mListAllData.add(new Data("Food", "food.jpg", ""));
-        mListAllData.add(new Data("Forest", "forest.jpg", ""));
-        mListAllData.add(new Data("Forest", "forest.jpeg", ""));
-        mListAllData.add(new Data("Galaxy", "galaxy.jpg", ""));
-        mListAllData.add(new Data("HTML", "html.jpg", ""));
-        mListAllData.add(new Data("HTML5", "html_1.jpg", ""));
-        mListAllData.add(new Data("HTML động", "html_2.jpg", ""));
-        mListAllData.add(new Data("Lịch sử HTML", "html_3.png", ""));
+        mListAllData.add(new Data("Book", "book.jpg", getString(R.string.book_content)));
+        mListAllData.add(new Data("Flower", "flower.jpg", getString(R.string.flower_content)));
+        mListAllData.add(new Data("Food", "food.jpg", getString(R.string.food_content)));
+        mListAllData.add(new Data("Forest", "forest.jpg", getString(R.string.forest_content)));
+        mListAllData.add(new Data("Galaxy", "galaxy.jpg", getString(R.string.galaxy_content)));
 
         PreferManager.getInstance(this).saveListData(mListAllData);
     }
