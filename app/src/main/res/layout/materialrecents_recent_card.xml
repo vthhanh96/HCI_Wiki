@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:cardPreventCornerOverlap="true"
+    app:cardElevation="@dimen/small">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/materialrecents_recentHeader"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:paddingStart="@dimen/small"
+            android:paddingEnd="@dimen/small"
+            android:background="@drawable/bg_card_title_border">
+
+            <TextView
+                android:id="@+id/materialrecents_recentTitle"
+                android:textColor="#ff000000"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:gravity="center_vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="56dp" />
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/materialrecents_recentIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/small"
+                android:paddingEnd="@dimen/small"
+                android:contentDescription="@null"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/materialrecents_recentContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

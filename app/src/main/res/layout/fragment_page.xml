@@ -4,10 +4,12 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/ll_no_pages"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -23,4 +25,10 @@
             android:textSize="20sp"
             android:padding="@dimen/small"/>
     </LinearLayout>
+
+    <com.example.honghanh.hci_wiki.widgets.RecentsList
+        android:id="@+id/recents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/normal"/>
 </LinearLayout>
