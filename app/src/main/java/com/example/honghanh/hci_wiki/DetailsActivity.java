@@ -1,5 +1,6 @@
 package com.example.honghanh.hci_wiki;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -31,6 +32,8 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static com.example.honghanh.hci_wiki.Constants.KEY_CONTENT_DATA;
 
@@ -53,6 +56,10 @@ public class DetailsActivity extends AppCompatActivity implements OnMenuItemClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/century_school_book-regular.otf")
+                .setFontAttrId(R.attr.fontPath)
+                .build());
         setContentView(R.layout.activity_details);
         ButterKnife.bind(this);
         setUpToolbar();
@@ -184,5 +191,10 @@ public class DetailsActivity extends AppCompatActivity implements OnMenuItemClic
     @Override
     public void onMenuItemClick(View clickedView, int position) {
 
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 }

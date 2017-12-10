@@ -32,11 +32,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
     @Override
     public void onBindViewHolder(HistoryViewHolder holder, final int position) {
         holder.tvSearchHistory.setText(mList.get(position));
-        if(position == getItemCount() - 1) {
-            holder.vMargin.setVisibility(View.GONE);
-        } else {
-            holder.vMargin.setVisibility(View.VISIBLE);
-        }
 
         holder.vDeleteSearchHistory.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,9 +64,6 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
 
         @Bind(R.id.view_delete_search_history)
         View vDeleteSearchHistory;
-
-        @Bind(R.id.view_margin)
-        View vMargin;
 
         public HistoryViewHolder(View itemView) {
             super(itemView);

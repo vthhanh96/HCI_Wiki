@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">HCI_Wiki</string>
-    <string name="hint_search">Type keyword here</string>
+    <string name="hint_search">Enter your keyword here</string>
     <string name="what_are_you_looking_for">What are you looking for?</string>
     <string name="recent_history">Recent history</string>
     <string name="no_results_message">Sorry!\nThere are no matching results for the text you have entered.\nPlease try again!</string>
@@ -8,81 +8,59 @@
     <string name="animal_content">Animals are eukaryotic, multicellular organisms that form the biological kingdom Animalia.
         With few exceptions, animals are motile (able to move), heterotrophic (consume organic material), reproduce sexually, and their embryonic development includes a blastula stage.
         The body plan of the animal derives from this blastula, differentiating specialized tissues and organs as it develops;
-        this plan eventually becomes fixed, although some undergo metamorphosis at some stage in their lives.\n\n
-        Zoology is the study of animals.
-        Currently there are over 66 thousand (less than 5% of all animals) vertebrate species, and over 1.3 million (over 95% of all animals) invertebrate species in existence.
-        Classification of animals into groups (taxonomy) is accomplished using either the hierarchical Linnaean system;
-        or cladistics, which displays diagrams (phylogenetic trees) called cladograms to show relationships based on the evolutionary principle of the most recent common ancestor.
-        Some recent classifications based on modern cladistics have explicitly abandoned the term "kingdom", noting that the traditional kingdoms are not monophyletic, i.e., do not consist of all the descendants of a common ancestor.\n\n
-        Animals are divided by body plan into vertebrates and invertebrates.
+        this plan eventually becomes fixed, although some undergo metamorphosis at some stage in their lives.\n\nSome recent classifications based on modern cladistics have explicitly abandoned the term "kingdom", noting that the traditional kingdoms are not monophyletic, i.e., do not consist of all the descendants of a common ancestor.\n\nAnimals are divided by body plan into vertebrates and invertebrates.
         Vertebrates—fishes, amphibians, reptiles, birds, and mammals—have a vertebral column (spine); invertebrates do not. All vertebrates and most invertebrates are bilaterally symmetrical (Bilateria).
         These invertebrates include arthropods, molluscs, roundworms, ringed worms, flatworms, and other phyla in Ecdysozoa and Spiralia. Echinoderm larvae are initially bilaterally symmetrical, but later as adults develop radial symmetry;
-        Cnidarians are radially symmetrical; ctenophores are biradially symmetrical; and sponges have no symmetry.\n\n
-        Animal phyla appeared in the fossil record as marine species during the Cambrian explosion, about 542 million years ago. Animals emerged as a clade within Apoikozoa as the sister group to the choanoflagellates.
+        Cnidarians are radially symmetrical; ctenophores are biradially symmetrical; and sponges have no symmetry.\n\nAnimal phyla appeared in the fossil record as marine species during the Cambrian explosion, about 542 million years ago. Animals emerged as a clade within Apoikozoa as the sister group to the choanoflagellates.
     </string>
 
     <string name="book_content">
-        A book is a set of sheets of paper, parchment, or similar materials that are fastened together to hinge at one side.
+        A book is a set of sheets of paper, parch, or similar materials that are fasten to together to hinge at one side.
         A single sheet within a book is a leaf, and each side of a leaf is a page.
-        Writing or images can be printed or drawn on a book\'s pages.
-        An electronic image that is formatted to resemble a book on a computer screen, smartphone or e-reader device is known as an electronic book or e-book.\n
-        The term "books" may also refer to a body of works of literature, or a main division of literature (e.g., children\'s literature).
-        In library and information science, a book is called a monograph, to distinguish it from serial periodicals such as magazines, journals, or newspapers.
-        In novels and sometimes other types of books (for example, biographies), a book may be divided into several large sections, also called books (Book 1, Book 2, Book 3, and so on).
-        An avid reader or collector of books or a book lover is a bibliophile or colloquially, "bookworm".\n
-        A shop where books are bought and sold is a bookshop or bookstore.
-        Books are also sold in some department stores, drugstores and newspaper vendors.
-        Books can also be borrowed from libraries.
-        Google has estimated that as of 2010, approximately 130,000,000 distinct titles had been published.
-        In some wealthier nations, the sale of printed books has decreased because of the use of e-books, though sales of e-books declined in the first half of 2015.
+        Writing or image can be printed or drawn on a book page.
+        An electronic images that is formatted to resemble a book on computer screen, smartphone or e-reader device is known as an electronic book or e-book.\n\nThe term "book" may also refer to the body of works of literature, or a main division of literature (e.g., children\'s literature).
+        In library and information science, a book is called a monograph, to distinguish it from serial periodicals such magazine, journal, newspaper.
+        In novel and sometimes other type of book (for example, biographies), a book may be divided into several large sections, also called books (Book 1, Book 2, Book 3, and so on).
+        An avid reader or collector of books or a book lover is a bibliophile or colloquially, "bookworm".\n\nA shop where books are bought and sold is a bookshop or bookstore.
+        Books are also sold in some department stores, a drugstore and newspaper vendors.
+        Book can also be borrowed from libraries.
+        But Google has estimated that as of 2010, an approximately 130,000,000 distinct titles had been published.
+        In some of wealthier nations, the sale of printed books has decreased because of the use of e-books, though sales of e-books declined in the first half of 2015.
     </string>
 
     <string name="flower_content">
-        A flower, sometimes known as a bloom or blossom, is the reproductive structure found in flowering plants (plants of the division Magnoliophyta, also called angiosperms).
-        The biological function of a flower is to effect reproduction, usually by providing a mechanism for the union of sperm with eggs.
-        Flowers may facilitate outcrossing (fusion of sperm and eggs from different individuals in a population) or allow selfing (fusion of sperm and egg from the same flower).
-        Some flowers produce diaspores without fertilization (parthenocarpy). Flowers contain sporangia and are the site where gametophytes develop.
+        A flower, sometimes known as a bloom or blossom, is the reproductive structure found in flowering plant (plant of the division Magnoliophyta, also called is angiosperms).
+        The biological function of flower is effect reproduction, usually providing mechanism for union of sperm with eggs. Flowers may cause facilitate outcrossing (fusion of sperm and egg from different individuals in a population) or allow selfing (fusion of sperm and egg from the same flower).\n\nSome flowers produce diaspores without fertilization (parthenocarpy). Flowers contain sporangia and are the site where gametophytes develop.
         Many flowers have evolved to be attractive to animals, so as to cause them to be vectors for the transfer of pollen.
-        After fertilization, the ovary of the flower develops into fruit containing seeds.\n
-        In addition to facilitating the reproduction of flowering plants, flowers have long been admired and used by humans to bring beauty to their environment, and also as objects of romance, ritual, religion, medicine and as a source of food.
+        After fertilization, the ovary of the flower develops into fruit containing seeds.\n\nIn addition to facilitating reproduction of flowering plants, flowers have long been admired and used by humans to bring beauty to their environment, also objects of romance, ritual, religion, medicine and as a source of food.
     </string>
 
     <string name="food_content">
-        Food is any substance consumed to provide nutritional support for an organism.
+        Food is any substance consume provide nutritional support for an organism.
         It is usually of plant or animal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals.
-        The substance is ingested by an organism and assimilated by the organism\'s cells to provide energy, maintain life, or stimulate growth.\n
-        Historically, humans secured food through two methods: hunting and gathering and agriculture.
-        Today, the majority of the food energy required by the ever increasing population of the world is supplied by the food industry.\n
-        Food safety and food security are monitored by agencies like the International Association for Food Protection, World Resources Institute, World Food Programme, Food and Agriculture Organization, and International Food Information Council.
-        They address issues such as sustainability, biological diversity, climate change, nutritional economics, population growth, water supply, and access to food.\n
-        The right to food is a human right derived from the International Covenant on Economic, Social and Cultural Rights (ICESCR), recognizing the "right to an adequate standard of living, including adequate food", as well as the "fundamental right to be free from hunger".
+        The substance is ingested an organism and assimilated by these organism\'s cell provide energy, maintain life, or stimulate growth.\n\nHistorically, human secure food though three methods: hunting and gathering and agriculture.
+        Today, the majorities of the food energy required by the ever increasing population of the world is supplied by the food industry.\n\nThe right food is human right derived from the International Covenant on Economic, Social and Cultural Rights, recognizing the "right to an adequate standard of living, including adequate food", as well as "fundamental right to be free from hunger".
     </string>
 
     <string name="forest_content">
-        A forest is a large area dominated by trees.
-        Hundreds of more precise definitions of forest are used throughout the world, incorporating factors such as tree density, tree height, land use, legal standing and ecological function.
-        According to the widely used Food and Agriculture Organization definition, forests covered four billion hectares (15 million square miles) or approximately 30 percent of the world\'s land area in 2006.\n
-        Forests are the dominant terrestrial ecosystem of Earth, and are distributed across the globe.
-        Forests account for 75% of the gross primary productivity of the Earth\'s biosphere, and contain 80% of the Earth\'s plant biomass.\n
-        Forests at different latitudes and elevations form distinctly different ecozones: boreal forests near the poles, tropical forests near the equator and temperate forests at mid-latitudes.
-        Higher elevation areas tend to support forests similar to those at higher latitudes, and amount of precipitation also affects forest composition.\n
-        Human society and forests influence each other in both positive and negative ways.
+        Forest is a large area dominate by trees.
+        Hundreds of more precise definitions of forest are used throughout the world, incorporate factors such as tree density, tree height, land use, legal standing and ecological function.
+        According to a widely used Food and Agriculture Organization definition, forests covered four billion hectares (15 million square miles) or approximately 30 percent of the world\'s land area in 2006.\n\nForests are the dominant terrestrial ecosystem of Earth, and are distributed across the globe.
+        Forests account for 75% of the gross primary productivity of the Earth\'s biosphere, and contain 80% of the Earth\'s plant biomass.\n\nForest at different latitude and elevation form distinctly different ecozones: boreal forests near the poles, tropical forests near the equator and temperate forests at the mid-latitudes.
+        Higher elevation areas tend to support forests similar to those at higher latitudes, and amount of precipitation affects forest composition.\n\nHuman society and forests influence each other in both positive and negative ways.
         Forests provide ecosystem services to humans and serve as tourist attractions.
         Forests can also affect people's health.
         Human activities, including harvesting forest resources, can negatively affect forest ecosystems.
     </string>
 
     <string name="galaxy_content">
-        A galaxy is a gravitationally bound system of stars, stellar remnants, interstellar gas, dust, and dark matter.
+        Galaxy is gravitationally bound system of stars, stellar remnants, interstellar gas, dust, and dark matter.
         The word galaxy is derived from the Greek galaxias (γαλαξίας), literally "milky", a reference to the Milky Way.
-        Galaxies range in size from dwarfs with just a few hundred million (108) stars to giants with one hundred trillion (1014) stars, each orbiting its galaxy\'s center of mass.
-        Galaxies are categorized according to their visual morphology as elliptical, spiral, or irregular.
-        Many galaxies are thought to have black holes at their active centers.
+        Galaxies range in size from dwarfs with just a few hundred million (108) stars to giants with one hundred trillion stars, each orbiting its galaxy\'s center of mass.
+        Galaxies are categorized according to their visual morphology as elliptical, spiral, irregular.\n\nMany galaxies are thought to have black holes at their active centers.
         The Milky Way\'s central black hole, known as Sagittarius A*, has a mass four million times greater than the Sun.
-        As of March 2016, GN-z11 is the oldest and most distant observed galaxy with a comoving distance of 32 billion light-years from Earth, and observed as it existed just 400 million years after the Big Bang.\n
-        Recent estimates of the number of galaxies in the observable universe range from 200 billion (2×1011) to 2 trillion (2×1012) or more, containing more stars than all the grains of sand on planet Earth.
-        Most of the galaxies are 1,000 to 100,000 parsecs in diameter and separated by distances on the order of millions of parsecs (or megaparsecs).\n
-        The space between galaxies is filled with a tenuous gas having an average density of less than one atom per cubic meter.
+        As of March 2016, GN-z11 is the oldest and most distant observed galaxy with a comoving distance of 32 billion light-years from Earth, and observed as it existed just 400 million years after the Big Bang.\n\nRecent estimates of the number of galaxies in the observable universe range from 200 billion (2×1011) to 2 trillion (2×1012) or more, containing more stars than all the grains of sand on planet Earth.
+        Most of the galaxies are 1,000 to 100,000 parsecs in diameter and separated by distances on the order of millions of parsecs (or megaparsecs).\n\nThe space between galaxies is filled with a tenuous gas having an average density of less than one atom per cubic meter.
         The majority of galaxies are gravitationally organized into groups, clusters, and superclusters.
         At the largest scale, these associations are generally arranged into sheets and filaments surrounded by immense voids.
         The largest structure of galaxies yet recognised is a cluster of superclusters that has been named Laniakea.
@@ -105,4 +83,11 @@
     <string name="terms_and_services">Terms and services</string>
     <string name="privacy_policy">Privacy policy</string>
     <string name="no_pages">No Pages!</string>
+    <string name="recent_stories">RECENT STORIES</string>
+    <string name="continue_reading">Continue reading</string>
+    <string name="read">Read</string>
+    <string name="your_recent_searches">Your Recent Searches</string>
+    <string name="no_recent_searches">No recent searches.</string>
+    <string name="results">Results</string>
+    <string name="no_results">No results.</string>
 </resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.FontCenturySchoolbookRegular" parent="android:TextAppearance">
+        <item name="fontPath">fonts/century_school_book-regular.otf</item>
+    </style>
+
+    <style name="TextAppearance.FontCenturySchoolbookBold" parent="android:TextAppearance">
+        <item name="fontPath">fonts/century_school_book-bold.otf</item>
+    </style>
+
+    <style name="TextAppearance.FontCenturySchoolbookItalic" parent="android:TextAppearance">
+        <item name="fontPath">fonts/century_school_book-italic.otf</item>
+    </style>
+
+    <style name="TextAppearance.FontCenturySchoolbookBoldItalic" parent="android:TextAppearance">
+        <item name="fontPath">fonts/century_school_book-bolditalic.otf</item>
+    </style>
+</resources>

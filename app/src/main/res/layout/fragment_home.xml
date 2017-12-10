@@ -35,6 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/hint_search"
+            android:textAppearance="@style/TextAppearance.FontCenturySchoolbookRegular"
             android:textColor="@color/white"
             android:textSize="18sp"
             android:layout_marginStart="@dimen/small"

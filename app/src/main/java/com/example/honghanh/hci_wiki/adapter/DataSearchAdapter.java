@@ -48,12 +48,6 @@ public class DataSearchAdapter extends RecyclerView.Adapter<DataSearchAdapter.Da
             e.printStackTrace();
         }
 
-        if(getItemCount() - 1 == position) {
-            holder.vMargin.setVisibility(View.GONE);
-        } else {
-            holder.vMargin.setVisibility(View.VISIBLE);
-        }
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -75,8 +69,6 @@ public class DataSearchAdapter extends RecyclerView.Adapter<DataSearchAdapter.Da
         TextView tvData;
         @Bind(R.id.view_img_data)
         View vImage;
-        @Bind(R.id.view_margin)
-        View vMargin;
 
         DataSearchViewHolder(View itemView) {
             super(itemView);

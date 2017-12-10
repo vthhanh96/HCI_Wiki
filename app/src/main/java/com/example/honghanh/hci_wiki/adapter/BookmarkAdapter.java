@@ -30,6 +30,12 @@ public class BookmarkAdapter extends BaseAdapter{
         mList.add(new Data("Forest", "forest.jpg", context.getString(R.string.forest_content)));
         mList.add(new Data("Animal", "animal.jpg", context.getString(R.string.animal_content)));
         mList.add(new Data("Galaxy", "galaxy.jpg", context.getString(R.string.galaxy_content)));
+        mList.add(new Data("Book", "book.jpg", context.getString(R.string.book_content)));
+        mList.add(new Data("Flower", "flower.jpg", context.getString(R.string.flower_content)));
+        mList.add(new Data("Food", "food.jpg", context.getString(R.string.food_content)));
+        mList.add(new Data("Forest", "forest.jpg", context.getString(R.string.forest_content)));
+        mList.add(new Data("Animal", "animal.jpg", context.getString(R.string.animal_content)));
+        mList.add(new Data("Galaxy", "galaxy.jpg", context.getString(R.string.galaxy_content)));
 
         mContext = context;
     }

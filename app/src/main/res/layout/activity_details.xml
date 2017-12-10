@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             app:collapsedTitleGravity="left"
-            app:contentScrim="@color/colorPrimaryDark"
+            app:contentScrim="@color/colorPrimary"
             app:expandedTitleGravity="left|bottom"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             android:fitsSystemWindows="true"
@@ -72,7 +72,7 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/normal"
                 android:textColor="@color/black"
-                android:textSize="18sp"/>
+                android:textAppearance="@style/TextAppearance.FontCenturySchoolbookRegular"/>
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"

@@ -7,10 +7,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:paddingTop="@dimen/small"
-        android:paddingBottom="@dimen/small"
-        android:paddingStart="@dimen/normal"
-        android:paddingEnd="@dimen/normal">
+        android:padding="@dimen/small">
 
         <View
             android:id="@+id/view_img_data"
@@ -27,10 +24,4 @@
             android:layout_marginEnd="@dimen/normal"/>
 
     </LinearLayout>
-
-    <View
-        android:id="@+id/view_margin"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorPrimaryDark"/>
 </LinearLayout>

@@ -44,6 +44,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/book"
                 android:padding="@dimen/mini"
+                android:textAppearance="@style/TextAppearance.FontCenturySchoolbookRegular"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 android:layout_gravity="center"/>

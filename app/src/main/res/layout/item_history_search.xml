@@ -7,30 +7,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:paddingTop="@dimen/small"
-        android:paddingBottom="@dimen/small"
-        android:paddingStart="@dimen/normal"
-        android:paddingEnd="@dimen/normal">
+        android:padding="@dimen/small"
+        android:paddingBottom="@dimen/small">
+
+        <View
+            android:layout_width="@dimen/normal"
+            android:layout_height="@dimen/normal"
+            android:background="@drawable/ic_history_dark" />
 
         <TextView
             android:id="@+id/tv_search_history"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:layout_marginStart="@dimen/small"
+            android:layout_marginEnd="@dimen/small"/>
 
         <View
             android:id="@+id/view_delete_search_history"
-            android:layout_width="@dimen/normal"
-            android:layout_height="@dimen/normal"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
             android:background="@drawable/ic_delete_dark"/>
     </LinearLayout>
-
-    <View
-        android:id="@+id/view_margin"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/colorPrimaryDark"
-        android:layout_marginStart="@dimen/normal"
-        android:layout_marginEnd="@dimen/normal"/>
 </LinearLayout>

@@ -3,6 +3,7 @@ package com.example.honghanh.hci_wiki;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
@@ -30,29 +31,31 @@ import static com.example.honghanh.hci_wiki.Constants.KEY_CONTENT_DATA;
 
 public class SearchActivity extends AppCompatActivity {
 
+    //top bar
     @Bind(R.id.edt_search)
     EditText edtSearch;
-
-    @Bind(R.id.img_back)
-    ImageView imgBack;
-
-    @Bind(R.id.img_delete_search)
+    @Bind(R.id.img_del_search)
     ImageView imgDelete;
 
-    @Bind(R.id.ll_no_history_data)
-    LinearLayout llNoHistory;
+    // recent search
+    @Bind(R.id.recent_search_container)
+    CardView recentSearchContainer;
+    @Bind(R.id.tv_no_recent_search)
+    TextView tvNoRecentSearch;
+    @Bind(R.id.rcv_recent_search)
+    RecyclerView rcvRecentSearch;
 
-    @Bind(R.id.ll_history)
-    LinearLayout llHistory;
+    //trending search
+    @Bind(R.id.trending_search_container)
+    CardView trendingSearchContainer;
 
-    @Bind(R.id.rcv_history)
-    RecyclerView rcvHistory;
-
-    @Bind(R.id.rcv_search_data)
-    RecyclerView rcvSearchData;
-
-    @Bind(R.id.ll_no_results)
-    LinearLayout llNoResults;
+    //results
+    @Bind(R.id.results_container)
+    CardView resultsContainer;
+    @Bind(R.id.tv_no_results)
+    TextView tvNoResults;
+    @Bind(R.id.rcv_results)
+    RecyclerView rcvResults;
 
     private List<String> mListHistory;
     private List<Data> mListAllData;
@@ -78,18 +81,22 @@ public class SearchActivity extends AppCompatActivity {
         mListSearchData = new ArrayList<>();
 
         if(mListHistory.size() == 0) {
-            llNoHistory.setVisibility(View.VISIBLE);
+            tvNoRecentSearch.setVisibility(View.VISIBLE);
+            rcvRecentSearch.setVisibility(View.GONE);
         } else {
-            llHistory.setVisibility(View.VISIBLE);
+            rcvRecentSearch.setVisibility(View.VISIBLE);
+            tvNoRecentSearch.setVisibility(View.GONE);
         }
+        recentSearchContainer.setVisibility(View.VISIBLE);
+        trendingSearchContainer.setVisibility(View.VISIBLE);
 
         historyAdapter = new HistoryAdapter(this, mListHistory);
-        rcvHistory.setAdapter(historyAdapter);
-        rcvHistory.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        rcvRecentSearch.setAdapter(historyAdapter);
+        rcvRecentSearch.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
         dataSearchAdapter = new DataSearchAdapter(this, mListSearchData);
-        rcvSearchData.setAdapter(dataSearchAdapter);
-        rcvSearchData.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        rcvResults.setAdapter(dataSearchAdapter);
+        rcvResults.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
     }
 
     private void initListener() {
@@ -122,12 +129,6 @@ public class SearchActivity extends AppCompatActivity {
             }
         });
 
-        imgBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
         imgDelete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -172,6 +173,7 @@ public class SearchActivity extends AppCompatActivity {
     }
 
     private void onSearch() {
+        if(mListSearchData.size() == 0) return;
         updateListHistory();
         if(mListSearchData.get(0) != null) {
             Intent intent = new Intent(this, DetailsActivity.class);
@@ -186,24 +188,28 @@ public class SearchActivity extends AppCompatActivity {
 
     private void updateUI() {
         if(edtSearch.getText().toString().equals("")) {
-            rcvSearchData.setVisibility(View.GONE);
-            llNoResults.setVisibility(View.GONE);
+            imgDelete.setVisibility(View.INVISIBLE);
+            recentSearchContainer.setVisibility(View.VISIBLE);
+            trendingSearchContainer.setVisibility(View.VISIBLE);
+            resultsContainer.setVisibility(View.GONE);
             if (mListHistory.size() > 0) {
-                llHistory.setVisibility(View.VISIBLE);
-                llNoHistory.setVisibility(View.GONE);
+                rcvRecentSearch.setVisibility(View.VISIBLE);
+                tvNoRecentSearch.setVisibility(View.GONE);
             } else {
-                llNoHistory.setVisibility(View.VISIBLE);
-                llHistory.setVisibility(View.GONE);
+                tvNoRecentSearch.setVisibility(View.VISIBLE);
+                rcvRecentSearch.setVisibility(View.GONE);
             }
         } else {
-            llNoHistory.setVisibility(View.GONE);
-            llHistory.setVisibility(View.GONE);
+            imgDelete.setVisibility(View.VISIBLE);
+            recentSearchContainer.setVisibility(View.GONE);
+            trendingSearchContainer.setVisibility(View.GONE);
+            resultsContainer.setVisibility(View.VISIBLE);
             if(mListSearchData.size() > 0) {
-                rcvSearchData.setVisibility(View.VISIBLE);
-                llNoResults.setVisibility(View.GONE);
+                rcvResults.setVisibility(View.VISIBLE);
+                tvNoResults.setVisibility(View.GONE);
             } else {
-                rcvSearchData.setVisibility(View.GONE);
-                llNoResults.setVisibility(View.VISIBLE);
+                rcvResults.setVisibility(View.GONE);
+                tvNoResults.setVisibility(View.VISIBLE);
             }
         }
 
