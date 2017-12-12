@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="321dp"
+        android:layout_height="38dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@layout/rounded_border_edittext"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Email"
+        android:singleLine="false"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="217dp">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="321dp"
+        android:layout_height="38dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="@layout/rounded_border_edittext"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="Password"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="264dp">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:layout_width="321dp"
+        android:layout_height="38dp"
+        android:text="Sign in"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="314dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot pasword?"
+        tools:layout_editor_absoluteX="140dp"
+        tools:layout_editor_absoluteY="364dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="— Or connect with —"
+        android:textSize="18sp"
+        tools:layout_editor_absoluteX="112dp"
+        tools:layout_editor_absoluteY="445dp" />
+
+    <Button
+        android:id="@+id/FB"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:text="FB"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="486dp" />
+
+    <Button
+        android:id="@+id/GG"
+        android:layout_width="131dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="48dp"
+        android:text="GG"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="486dp" />
+</android.support.constraint.ConstraintLayout>
