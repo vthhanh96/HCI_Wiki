@@ -90,4 +90,9 @@
     <string name="no_recent_searches">No recent searches.</string>
     <string name="results">Results</string>
     <string name="no_results">No results.</string>
+    <string name="sign_in">Sign in</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="sign_in_with_facebook">Sign in with facebook</string>
 </resources>
