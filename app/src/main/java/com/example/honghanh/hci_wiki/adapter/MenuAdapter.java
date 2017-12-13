@@ -48,7 +48,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuHolder> {
         final ItemMenu itemMenu = mList.get(position);
         holder.imgIcon.setImageDrawable(mContext.getResources().getDrawable(itemMenu.getIcon()));
         holder.tvText.setText(itemMenu.getText());
-        holder.rltItemMenu.setBackgroundColor(itemMenu.isSelected() ? mContext.getResources().getColor(R.color.colorPrimaryDark) : mContext.getResources().getColor(R.color.colorPrimary));
+        holder.rltItemMenu.setBackgroundColor(itemMenu.isSelected() ? mContext.getResources().getColor(R.color.tint_color) : mContext.getResources().getColor(R.color.app_color));
         holder.vLine.setVisibility(itemMenu.isSelected() ? View.VISIBLE : View.INVISIBLE);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

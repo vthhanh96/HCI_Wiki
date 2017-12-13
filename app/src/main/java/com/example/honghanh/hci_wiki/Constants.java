@@ -9,5 +9,6 @@ public class Constants {
     public static final int NAV_DRAWER_ID_HISTORY_PAGE = 2;
     public static final int NAV_DRAWER_ID_SETTINGS_PAGE = 3;
     public static final int NAV_DRAWER_ID_PROFILE = 4;
+    public static final int NAV_DRAWER_ID_TOPIC = 5;
 
 }

@@ -53,8 +53,8 @@
             android:paddingEnd="@dimen/large"
             android:paddingStart="@dimen/large"
             android:paddingTop="@dimen/normal"
-            android:text="ACCOUNT INFORMATION"
-            android:textColor="@color/black"
+            android:text="@string/account_information"
+            android:textColor="@color/tint_color"
             android:textStyle="bold" />
 
         <View
@@ -110,7 +110,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Email" />
+                    android:text="@string/email" />
 
                 <TextView
                     android:layout_width="0dp"
@@ -152,8 +152,6 @@
             </LinearLayout>
         </LinearLayout>
 
-
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -163,8 +161,8 @@
             android:paddingEnd="@dimen/large"
             android:paddingStart="@dimen/large"
             android:paddingTop="@dimen/normal"
-            android:text="MY ACCOUNT"
-            android:textColor="@color/black"
+            android:text="@string/my_account"
+            android:textColor="@color/tint_color"
             android:textStyle="bold" />
 
         <View

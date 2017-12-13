@@ -23,6 +23,7 @@ import static com.example.honghanh.hci_wiki.Constants.NAV_DRAWER_ID_HISTORY_PAGE
 import static com.example.honghanh.hci_wiki.Constants.NAV_DRAWER_ID_HOME_PAGE;
 import static com.example.honghanh.hci_wiki.Constants.NAV_DRAWER_ID_PROFILE;
 import static com.example.honghanh.hci_wiki.Constants.NAV_DRAWER_ID_SETTINGS_PAGE;
+import static com.example.honghanh.hci_wiki.Constants.NAV_DRAWER_ID_TOPIC;
 
 public abstract class DrawerActivity extends AppCompatActivity {
 
@@ -56,7 +57,8 @@ public abstract class DrawerActivity extends AppCompatActivity {
         mMenuList.add(new ItemMenu(NAV_DRAWER_ID_BOOKMARK_PAGE, "Bookmark", R.drawable.ic_bookmark, getNavId() == NAV_DRAWER_ID_BOOKMARK_PAGE));
         mMenuList.add(new ItemMenu(NAV_DRAWER_ID_HISTORY_PAGE, "History", R.drawable.ic_history, getNavId() == NAV_DRAWER_ID_HISTORY_PAGE));
         mMenuList.add(new ItemMenu(NAV_DRAWER_ID_SETTINGS_PAGE, "Settings", R.drawable.ic_settings, getNavId() == NAV_DRAWER_ID_SETTINGS_PAGE));
-        mMenuList.add(new ItemMenu(NAV_DRAWER_ID_PROFILE, "Profile", R.drawable.ic_settings, getNavId() == NAV_DRAWER_ID_PROFILE));
+        mMenuList.add(new ItemMenu(NAV_DRAWER_ID_PROFILE, "Profile", R.drawable.ic_profile, getNavId() == NAV_DRAWER_ID_PROFILE));
+        mMenuList.add(new ItemMenu(NAV_DRAWER_ID_TOPIC, "Topic", R.drawable.ic_settings, getNavId() == NAV_DRAWER_ID_TOPIC));
     }
 
     private void setUpNavDrawer() {
@@ -72,6 +74,8 @@ public abstract class DrawerActivity extends AppCompatActivity {
             public void onItemClick(int key) {
                 switch (key) {
                     case NAV_DRAWER_ID_HOME_PAGE:
+                        Intent intentHome = new Intent(DrawerActivity.this, MainActivity.class);
+                        startActivity(intentHome);
                         break;
                     case NAV_DRAWER_ID_BOOKMARK_PAGE:
                         break;
@@ -80,8 +84,12 @@ public abstract class DrawerActivity extends AppCompatActivity {
                     case NAV_DRAWER_ID_SETTINGS_PAGE:
                         break;
                     case NAV_DRAWER_ID_PROFILE:
-                        Intent intent = new Intent(DrawerActivity.this, ProfileActivity.class);
-                        startActivity(intent);
+                        Intent intentProfile = new Intent(DrawerActivity.this, ProfileActivity.class);
+                        startActivity(intentProfile);
+                        break;
+                    case NAV_DRAWER_ID_TOPIC:
+                        Intent intentTopic = new Intent(DrawerActivity.this, TopicActivity.class);
+                        startActivity(intentTopic);
                         break;
                 }
             }

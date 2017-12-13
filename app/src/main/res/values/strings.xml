@@ -96,4 +96,6 @@
     <string name="forgot_password">Forgot password?</string>
     <string name="sign_in_with_facebook">Sign in with facebook</string>
     <string name="lasted_stories">LASTED STORIES</string>
+    <string name="account_information">ACCOUNT INFORMATION</string>
+    <string name="my_account">MY ACCOUNT</string>
 </resources>
