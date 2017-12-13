@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.honghanh.hci_wiki.R;
 
@@ -29,6 +30,9 @@ public class CustomViewTopBar extends RelativeLayout implements View.OnClickList
 
     @Bind(R.id.imgRight)
     ImageView imgRight;
+
+    @Bind(R.id.tv_title)
+    TextView tvTitle;
 
     private OnLeftRightClickListener leftRightClickListener;
 
@@ -83,11 +87,16 @@ public class CustomViewTopBar extends RelativeLayout implements View.OnClickList
         imgRight.setImageResource(one);
     }
 
+    public void setTitle(String title) {
+        tvTitle.setText(title);
+        tvTitle.setVisibility(VISIBLE);
+    }
+
     public void setTransparentBackground(boolean isTransparent) {
         if(isTransparent) {
             rltTopBar.setBackgroundColor(Color.TRANSPARENT);
         } else {
-            rltTopBar.setBackgroundColor(this.getResources().getColor(R.color.colorPrimary));
+            rltTopBar.setBackgroundColor(this.getResources().getColor(R.color.white));
         }
     }
 }

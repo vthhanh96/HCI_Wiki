@@ -1,6 +1,5 @@
 package com.example.honghanh.hci_wiki.fragments;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,7 +8,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.bumptech.glide.Glide;
 import com.example.honghanh.hci_wiki.R;
 
 public class FragmentTopStories extends Fragment {
@@ -51,19 +49,19 @@ public class FragmentTopStories extends Fragment {
         String uriImage = "";
         switch (currentIndex) {
             case FRAGMENT_ONE:
-                imgTopStory.setImageDrawable(getContext().getResources().getDrawable(R.drawable.book));
+                imgTopStory.setImageDrawable(getContext().getResources().getDrawable(R.drawable.united_nation));
                 break;
             case FRAGMENT_TWO:
-                imgTopStory.setImageDrawable(getContext().getResources().getDrawable(R.drawable.flower));
+                imgTopStory.setImageDrawable(getContext().getResources().getDrawable(R.drawable.video_game));
                 break;
             case FRAGMENT_THREE:
-                imgTopStory.setImageDrawable(getContext().getResources().getDrawable(R.drawable.food));
+                imgTopStory.setImageDrawable(getContext().getResources().getDrawable(R.drawable.dessert));
                 break;
             case FRAGMENT_FOUR:
-                imgTopStory.setImageDrawable(getContext().getResources().getDrawable(R.drawable.forest));
+                imgTopStory.setImageDrawable(getContext().getResources().getDrawable(R.drawable.valentine));
                 break;
             case FRAGMENT_FIVE:
-                imgTopStory.setImageDrawable(getContext().getResources().getDrawable(R.drawable.animal));
+                imgTopStory.setImageDrawable(getContext().getResources().getDrawable(R.drawable.flower));
                 break;
         }
     }

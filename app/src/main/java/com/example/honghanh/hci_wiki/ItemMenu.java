@@ -2,14 +2,24 @@ package com.example.honghanh.hci_wiki;
 
 public class ItemMenu {
 
+    private int key;
     private String text;
     private int icon;
     private boolean isSelected;
 
-    public ItemMenu(String text, int icon, boolean isSelected) {
+    public ItemMenu(int key, String text, int icon, boolean isSelected) {
+        this.key = key;
         this.text = text;
         this.icon = icon;
         this.isSelected = isSelected;
+    }
+
+    public int getKey() {
+        return key;
+    }
+
+    public void setKey(int key) {
+        this.key = key;
     }
 
     public String getText() {

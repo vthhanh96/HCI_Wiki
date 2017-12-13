@@ -23,6 +23,15 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuHolder> {
 
     private Context mContext;
     private List<ItemMenu> mList;
+    private OnItemMenuClick mListener;
+
+    public interface OnItemMenuClick {
+        void onItemClick(int key);
+    }
+
+    public void setOnItemClickListener(OnItemMenuClick listener) {
+        mListener = listener;
+    }
 
     public MenuAdapter(Context context, List<ItemMenu> list) {
         mContext = context;
@@ -36,11 +45,20 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.MenuHolder> {
 
     @Override
     public void onBindViewHolder(MenuHolder holder, int position) {
-        ItemMenu itemMenu = mList.get(position);
+        final ItemMenu itemMenu = mList.get(position);
         holder.imgIcon.setImageDrawable(mContext.getResources().getDrawable(itemMenu.getIcon()));
         holder.tvText.setText(itemMenu.getText());
         holder.rltItemMenu.setBackgroundColor(itemMenu.isSelected() ? mContext.getResources().getColor(R.color.colorPrimaryDark) : mContext.getResources().getColor(R.color.colorPrimary));
         holder.vLine.setVisibility(itemMenu.isSelected() ? View.VISIBLE : View.INVISIBLE);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mListener != null) {
+                    mListener.onItemClick(itemMenu.getKey());
+                }
+            }
+        });
     }
 
 
