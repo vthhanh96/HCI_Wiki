@@ -3,7 +3,7 @@
     android:id="@+id/rlt_top_bar"
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="?actionBarSize"
-    android:background="@color/white">
+    android:background="@color/colorPrimary">
 
     <ImageView
         android:id="@+id/imgLeft"
@@ -18,9 +18,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:visibility="gone"/>
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:visibility="gone"
+        android:textAppearance="@style/TextAppearance.FontArsenalBold"/>
 
     <ImageView
         android:id="@+id/imgRight"

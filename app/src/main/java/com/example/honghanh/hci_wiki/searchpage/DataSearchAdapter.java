@@ -1,4 +1,4 @@
-package com.example.honghanh.hci_wiki.adapter;
+package com.example.honghanh.hci_wiki.searchpage;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;

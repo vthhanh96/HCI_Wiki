@@ -21,7 +21,8 @@
             android:textColor="@color/black"
             android:textSize="18sp"
             android:layout_marginStart="@dimen/normal"
-            android:layout_marginEnd="@dimen/normal"/>
+            android:layout_marginEnd="@dimen/normal"
+            android:textAppearance="@style/TextAppearance.FontArsenalRegular"/>
 
     </LinearLayout>
 </LinearLayout>

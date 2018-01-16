@@ -65,6 +65,12 @@
         At the largest scale, these associations are generally arranged into sheets and filaments surrounded by immense voids.
         The largest structure of galaxies yet recognised is a cluster of superclusters that has been named Laniakea.
     </string>
+
+    <string name="george_weah_content">George Manneh Oppong Ousman Weah (sinh 1 tháng 10 năm 1966 tại Monrovia) là tổng thống thứ 25 của Liberia[1] và cựu cầu thủ bóng đá người Liberia. Ông đã dành quãng thời gian 14 năm trong sự nghiệp chơi cho các câu lạc bộ tại Pháp, Italia và Anh và giành được các danh hiệu tại hai trong số ba quốc gia kể trên. Năm 1995 tại Milan, ông giành được danh hiệu cầu thủ xuất sắc nhất thế giới của FIFA, cầu thủ xuất sắc nhất châu Âu và cầu thủ xuất sắc nhất châu Phi. Ông thường được ca ngợi là một trong những cầu thủ vĩ đại nhất mọi thời đại của bóng đá châu Phi.
+George Weah được các nhà chuyên môn tại châu Phi đánh giá là top 3 "Cầu thủ châu Phi Vĩ đại nhất mọi Thời đại" khi vượt qua Abedi Pele, Jay-Jay Okocha, Nwankwo Kanu, Roger Milla. Didier Drogba xếp thứ ba, George Weah về thứ hai, Samuel Eto\'o giành vị trí thứ nhất trong cuộc bầu chọn này.[2]
+Ảnh hưởng của Weah tới Liberia nói riêng và châu Phi nói chung là rất lớn. Weah đã tham gia vào chính trị ở Liberia sau khi nghỉ hưu từ bóng đá và hiện giờ là một nhà nhân quyền và chính trị gia tại Liberia, nhưng không thành công trong cuộc bầu cử tổng thống của Liberia năm 2005, thất bại trước Ellen Johnson-Sirleaf trong vòng hai của cuộc bầu cử[3]. Trong cuộc bầu cử năm 2011, ông cũng không thành công với vai trò ứng cử viên Phó Tổng thống. Sau đó Weah đã được bầu vào Thượng viện Liberia, đại diện cho quận Montserrado trong cuộc bầu cử 2014.
+Weah được bầu làm Tổng thống Liberia trong cuộc bầu cử năm 2017, đánh bại Phó Tổng thống đương nhiệm Joseph Boakai.</string>
+    <string name="george_weah_short_content">George Manneh Oppong Ousman Weah (sinh 1 tháng 10 năm 1966 tại Monrovia) là tổng thống thứ 25 của Liberia và cựu cầu thủ bóng đá người Liberia. Ông đã dành quãng thời gian 14 năm trong sự nghiệp chơi cho các câu lạc bộ tại Pháp, Italia và Anh và giành được các danh hiệu tại hai trong số ba quốc gia kể trên.</string>
     <string name="search">Search</string>
     <string name="page">Page</string>
     <string name="more">More</string>
@@ -94,7 +100,7 @@
     <string name="email">Email</string>
     <string name="password">Password</string>
     <string name="forgot_password">Forgot password?</string>
-    <string name="sign_in_with_facebook">Sign in with facebook</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
     <string name="lasted_stories">LASTED STORIES</string>
     <string name="account_information">ACCOUNT INFORMATION</string>
     <string name="my_account">MY ACCOUNT</string>

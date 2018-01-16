@@ -8,12 +8,6 @@
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/action_page"
-        android:title="@string/page"
-        android:icon="@drawable/ic_page_menu"
-        app:showAsAction="always" />
-
-    <item
         android:id="@+id/action_more"
         android:title="@string/more"
         android:icon="@drawable/ic_more_menu"

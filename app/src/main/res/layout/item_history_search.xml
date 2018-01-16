@@ -22,7 +22,8 @@
             android:layout_weight="1"
             android:textColor="@color/black"
             android:layout_marginStart="@dimen/small"
-            android:layout_marginEnd="@dimen/small"/>
+            android:layout_marginEnd="@dimen/small"
+            android:textAppearance="@style/TextAppearance.FontArsenalRegular"/>
 
         <View
             android:id="@+id/view_delete_search_history"

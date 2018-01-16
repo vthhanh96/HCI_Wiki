@@ -1,75 +1,248 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/main_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <android.support.v4.widget.NestedScrollView
+        <com.example.honghanh.hci_wiki.widgets.StickyScrollView
             android:id="@+id/scv_container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="?actionBarSize">
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:descendantFocusability="blocksDescendants">
 
-                <FrameLayout
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_news"
                     android:layout_width="match_parent"
-                    android:layout_height="250dp"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal"
+                    android:visibility="invisible">
 
-                    <android.support.v4.view.ViewPager
-                        android:id="@+id/vp_top_stories"
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                        android:layout_height="wrap_content">
 
-                    <me.relex.circleindicator.CircleIndicator
-                        android:id="@+id/indicator"
-                        android:layout_width="match_parent"
-                        android:layout_height="48dp"
-                        android:layout_gravity="bottom" />
-                </FrameLayout>
+                        <ImageView
+                            android:id="@+id/img_news"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_news"
+                            android:layout_marginTop="@dimen/normal"
+                            android:layout_marginStart="@dimen/normal"
+                            android:layout_marginEnd="@dimen/normal"/>
 
-                <LinearLayout
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="News"
+                            android:layout_toRightOf="@id/img_news"
+                            android:layout_toEndOf="@id/img_news"
+                            android:layout_marginTop="@dimen/normal"
+                            android:textSize="16sp"
+                            android:textAppearance="@style/TextAppearance.FontArsenalBold"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rcv_news"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_news"
+                            android:padding="@dimen/small"/>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_trends"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/normal"
+                    android:layout_marginEnd="@dimen/normal"
+                    android:layout_marginBottom="@dimen/normal"
+                    android:visibility="invisible">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="@dimen/normal"
-                        android:text="@string/lasted_stories"
-                        android:textStyle="bold" />
-
-                    <android.support.v7.widget.RecyclerView
-                        android:id="@+id/rcv_recent"
+                    <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
-                </LinearLayout>
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/img_trending"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_trend"
+                            android:layout_marginTop="@dimen/normal"
+                            android:layout_marginStart="@dimen/normal"
+                            android:layout_marginEnd="@dimen/normal"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Trends"
+                            android:layout_toRightOf="@id/img_trending"
+                            android:layout_toEndOf="@id/img_trending"
+                            android:layout_marginTop="@dimen/normal"
+                            android:textSize="16sp"
+                            android:textAppearance="@style/TextAppearance.FontArsenalBold"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/rcv_trending"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/img_trending"
+                            android:padding="@dimen/small"/>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cv_continue_reading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/normal"
+                    android:layout_marginEnd="@dimen/normal"
+                    android:layout_marginBottom="@dimen/normal"
+                    android:visibility="invisible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/img_recent"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_recent"
+                            android:layout_marginTop="@dimen/normal"
+                            android:layout_marginStart="@dimen/normal"
+                            android:layout_marginEnd="@dimen/normal"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Continue reading"
+                            android:layout_toRightOf="@id/img_recent"
+                            android:layout_toEndOf="@id/img_recent"
+                            android:layout_marginTop="@dimen/normal"
+                            android:textSize="16sp"
+                            android:textAppearance="@style/TextAppearance.FontArsenalBold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_below="@id/img_recent"
+                            android:layout_marginStart="@dimen/normal"
+                            android:layout_marginEnd="@dimen/normal"
+                            android:layout_marginTop="@dimen/small"
+                            android:layout_marginBottom="@dimen/small">
+
+                            <ImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="5"
+                                android:src="@drawable/video_game"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="8"
+                                android:orientation="vertical"
+                                android:layout_margin="@dimen/small">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Video game"
+                                    android:textSize="14sp"
+                                    android:textColor="@color/black"
+                                    android:textAppearance="@style/TextAppearance.FontArsenalBold"/>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="12sp"
+                                    android:maxLines="4"
+                                    android:textAppearance="@style/TextAppearance.FontPlayFairDisplayRegular"
+                                    android:text="A computing platform is the environment in which a piece of software is executed. It may be the hardware or the operating system (OS), even a web browser or other underlying software, as long as the program code is executed in it."/>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
 
             </LinearLayout>
-        </android.support.v4.widget.NestedScrollView>
 
-        <android.support.v7.widget.CardView
+        </com.example.honghanh.hci_wiki.widgets.StickyScrollView>
+
+        <android.support.design.widget.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent">
+            android:theme="@style/top_bar_style">
 
-            <com.example.honghanh.hci_wiki.widgets.CustomViewTopBar
+            <LinearLayout
                 android:id="@+id/top_bar"
                 android:layout_width="match_parent"
-                android:layout_height="?actionBarSize"/>
-        </android.support.v7.widget.CardView>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/normal"
+                android:paddingEnd="@dimen/normal"
+                android:paddingTop="@dimen/normal"
+                android:background="#00bbd3"
+                android:visibility="visible"
+                app:layout_scrollFlags="scroll|enterAlways" >
 
-    </FrameLayout>
+                <ImageView
+                    android:id="@+id/img_menu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_menu"
+                    android:layout_gravity="center_vertical"/>
 
-    <include layout="@layout/layout_menu" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Wikie"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:layout_marginStart="@dimen/small"
+                    android:layout_marginEnd="@dimen/small"
+                    android:textAppearance="@style/TextAppearance.FontArsenalBold"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/top_bar"
+                android:background="#00bbd3">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/normal">
+                    <TextView
+                        android:id="@+id/tv_search"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hint_search"
+                        android:textSize="16sp"
+                        android:padding="12dp"
+                        android:drawableStart="@drawable/ic_search"
+                        android:drawableLeft="@drawable/ic_search"
+                        android:drawablePadding="@dimen/small"
+                        android:background="@color/white"
+                        android:textAppearance="@style/TextAppearance.FontArsenalRegular"/>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+        </android.support.design.widget.AppBarLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <include layout="@layout/layout_menu"/>
 </android.support.v4.widget.DrawerLayout>

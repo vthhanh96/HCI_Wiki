@@ -11,9 +11,9 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.TextView;
 
-import com.example.honghanh.hci_wiki.DetailsActivity;
+import com.example.honghanh.hci_wiki.detailpage.DetailsActivity;
 import com.example.honghanh.hci_wiki.R;
-import com.example.honghanh.hci_wiki.SearchActivity;
+import com.example.honghanh.hci_wiki.searchpage.SearchActivity;
 import com.example.honghanh.hci_wiki.adapter.RecentSearchAdapter;
 import com.example.honghanh.hci_wiki.storage.model.Data;
 

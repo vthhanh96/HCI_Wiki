@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 import com.example.honghanh.hci_wiki.Constants;
-import com.example.honghanh.hci_wiki.DetailsActivity;
+import com.example.honghanh.hci_wiki.detailpage.DetailsActivity;
 import com.example.honghanh.hci_wiki.R;
 import com.example.honghanh.hci_wiki.storage.model.Data;
 import com.example.honghanh.hci_wiki.widgets.RecentsAdapter;

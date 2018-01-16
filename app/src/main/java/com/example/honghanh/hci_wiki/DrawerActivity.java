@@ -9,8 +9,10 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 
-import com.example.honghanh.hci_wiki.R;
 import com.example.honghanh.hci_wiki.adapter.MenuAdapter;
+import com.example.honghanh.hci_wiki.bookmarkpage.BookmarkActivity;
+import com.example.honghanh.hci_wiki.homepage.MainActivity;
+import com.example.honghanh.hci_wiki.topicpage.TopicActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +36,6 @@ public abstract class DrawerActivity extends AppCompatActivity {
 
     private MenuAdapter mAdapter;
     private List<ItemMenu> mMenuList;
-    private static final int DRAWER_LAUNCH_DELAY = 50;
 
     abstract protected int getLayoutId();
 
@@ -56,9 +57,8 @@ public abstract class DrawerActivity extends AppCompatActivity {
         mMenuList.add(new ItemMenu(NAV_DRAWER_ID_HOME_PAGE, "Home", R.drawable.ic_home, getNavId() == NAV_DRAWER_ID_HOME_PAGE));
         mMenuList.add(new ItemMenu(NAV_DRAWER_ID_BOOKMARK_PAGE, "Bookmark", R.drawable.ic_bookmark, getNavId() == NAV_DRAWER_ID_BOOKMARK_PAGE));
         mMenuList.add(new ItemMenu(NAV_DRAWER_ID_HISTORY_PAGE, "History", R.drawable.ic_history, getNavId() == NAV_DRAWER_ID_HISTORY_PAGE));
-        mMenuList.add(new ItemMenu(NAV_DRAWER_ID_SETTINGS_PAGE, "Settings", R.drawable.ic_settings, getNavId() == NAV_DRAWER_ID_SETTINGS_PAGE));
-        mMenuList.add(new ItemMenu(NAV_DRAWER_ID_PROFILE, "Profile", R.drawable.ic_profile, getNavId() == NAV_DRAWER_ID_PROFILE));
         mMenuList.add(new ItemMenu(NAV_DRAWER_ID_TOPIC, "Topic", R.drawable.ic_settings, getNavId() == NAV_DRAWER_ID_TOPIC));
+        mMenuList.add(new ItemMenu(NAV_DRAWER_ID_PROFILE, "Profile", R.drawable.ic_profile, getNavId() == NAV_DRAWER_ID_PROFILE));
     }
 
     private void setUpNavDrawer() {
@@ -72,14 +72,22 @@ public abstract class DrawerActivity extends AppCompatActivity {
         mAdapter.setOnItemClickListener(new MenuAdapter.OnItemMenuClick() {
             @Override
             public void onItemClick(int key) {
+                closeDrawer();
+                if(key == getNavId()) {
+                    return;
+                }
                 switch (key) {
                     case NAV_DRAWER_ID_HOME_PAGE:
                         Intent intentHome = new Intent(DrawerActivity.this, MainActivity.class);
                         startActivity(intentHome);
                         break;
                     case NAV_DRAWER_ID_BOOKMARK_PAGE:
+                        Intent intentBookmark = new Intent(DrawerActivity.this, BookmarkActivity.class);
+                        startActivity(intentBookmark);
                         break;
                     case NAV_DRAWER_ID_HISTORY_PAGE:
+                        Intent intentHistory = new Intent(DrawerActivity.this, HistoryActivity.class);
+                        startActivity(intentHistory);
                         break;
                     case NAV_DRAWER_ID_SETTINGS_PAGE:
                         break;

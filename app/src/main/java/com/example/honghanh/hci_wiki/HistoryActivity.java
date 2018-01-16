@@ -1,30 +1,32 @@
 package com.example.honghanh.hci_wiki;
 
-
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
+import com.example.honghanh.hci_wiki.searchpage.SearchActivity;
 import com.example.honghanh.hci_wiki.widgets.CustomViewTopBar;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-import static com.example.honghanh.hci_wiki.Constants.NAV_DRAWER_ID_TOPIC;
+import static com.example.honghanh.hci_wiki.Constants.NAV_DRAWER_ID_HISTORY_PAGE;
 
-public class TopicActivity extends DrawerActivity {
+public class HistoryActivity extends DrawerActivity{
 
     @Bind(R.id.top_bar)
     CustomViewTopBar topBar;
 
     @Override
     protected int getLayoutId() {
-        return R.layout.activity_topic;
+        return R.layout.activity_history;
     }
 
     @Override
     protected int getNavId() {
-        return NAV_DRAWER_ID_TOPIC;
+        return NAV_DRAWER_ID_HISTORY_PAGE;
     }
 
     @Override
@@ -36,10 +38,15 @@ public class TopicActivity extends DrawerActivity {
         initListener();
     }
 
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+    }
+
     private void initData() {
         topBar.setImageViewLeft(CustomViewTopBar.LEFT_MENU);
         topBar.setImageViewRight(CustomViewTopBar.DRAWABLE_SEARCH);
-        topBar.setTitle("Topic");
+        topBar.setTitle("History");
     }
 
     private void initListener() {
@@ -51,7 +58,7 @@ public class TopicActivity extends DrawerActivity {
 
             @Override
             public void onRightClick() {
-                Intent intent = new Intent(TopicActivity.this, SearchActivity.class);
+                Intent intent = new Intent(HistoryActivity.this, SearchActivity.class);
                 startActivity(intent);
             }
         });

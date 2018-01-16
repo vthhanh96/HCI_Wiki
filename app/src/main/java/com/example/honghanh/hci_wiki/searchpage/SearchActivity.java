@@ -1,5 +1,6 @@
-package com.example.honghanh.hci_wiki;
+package com.example.honghanh.hci_wiki.searchpage;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,11 +14,10 @@ import android.view.View;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.honghanh.hci_wiki.adapter.DataSearchAdapter;
-import com.example.honghanh.hci_wiki.adapter.HistoryAdapter;
+import com.example.honghanh.hci_wiki.detailpage.DetailsActivity;
+import com.example.honghanh.hci_wiki.R;
 import com.example.honghanh.hci_wiki.storage.PreferManager;
 import com.example.honghanh.hci_wiki.storage.model.Data;
 
@@ -26,6 +26,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static com.example.honghanh.hci_wiki.Constants.KEY_CONTENT_DATA;
 
@@ -72,6 +73,11 @@ public class SearchActivity extends AppCompatActivity {
 
         initData();
         initListener();
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     private void initData() {

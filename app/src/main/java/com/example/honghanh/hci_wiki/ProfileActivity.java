@@ -1,5 +1,6 @@
 package com.example.honghanh.hci_wiki;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,6 +9,7 @@ import com.example.honghanh.hci_wiki.widgets.CustomViewTopBar;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static com.example.honghanh.hci_wiki.Constants.NAV_DRAWER_ID_PROFILE;
 
@@ -33,6 +35,11 @@ public class ProfileActivity extends DrawerActivity {
 
         initData();
         initListener();
+    }
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
 
     private void initData() {

@@ -15,4 +15,34 @@
     <style name="TextAppearance.FontCenturySchoolbookBoldItalic" parent="android:TextAppearance">
         <item name="fontPath">fonts/century_school_book-bolditalic.otf</item>
     </style>
+
+    <style name="TextAppearance.FontFuturaRegular" parent="android:TextAppearance">
+        <item name="fontPath">fonts/futura_regular.ttf</item>
+    </style>
+
+    <style name="TextAppearance.UnicodeFutura" parent="android:TextAppearance">
+        <item name="fontPath">fonts/unicode_futura.ttf</item>
+    </style>
+
+    <style name="TextAppearance.FontArsenalBold" parent="android:TextAppearance">
+        <item name="fontPath">fonts/Arsenal-Bold.ttf</item>
+    </style>
+
+    <style name="TextAppearance.FontArsenalBoldItalic" parent="android:TextAppearance">
+        <item name="fontPath">fonts/Arsenal-BoldItalic.ttf</item>
+    </style>
+
+    <style name="TextAppearance.FontArsenalItalic" parent="android:TextAppearance">
+        <item name="fontPath">fonts/Arsenal-Italic.ttf</item>
+    </style>
+
+    <style name="TextAppearance.FontArsenalRegular" parent="android:TextAppearance">
+        <item name="fontPath">fonts/Arsenal-Regular.ttf</item>
+    </style>
+
+
+    <style name="TextAppearance.FontPlayFairDisplayRegular" parent="android:TextAppearance">
+        <item name="fontPath">fonts/playfair_display_regular.ttf</item>
+    </style>
+
 </resources>

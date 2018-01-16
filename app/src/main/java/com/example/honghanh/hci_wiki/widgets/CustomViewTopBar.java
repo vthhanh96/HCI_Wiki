@@ -20,7 +20,7 @@ public class CustomViewTopBar extends RelativeLayout implements View.OnClickList
     public static final int LEFT_MENU = 0;
     public static final int LEFT_BACK = 1;
 
-    public static final int DRAWABLE_SEARCH = R.drawable.ic_search;
+    public static final int DRAWABLE_SEARCH = R.drawable.ic_search_menu;
 
     @Bind(R.id.rlt_top_bar)
     RelativeLayout rltTopBar;

@@ -9,18 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".homepage.MainActivity"/>
+        <activity android:name=".newsDetailPage.NewsDetailActivity"/>
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SearchActivity" />
-        <activity android:name=".DetailsActivity"/>
+        <activity android:name=".searchpage.SearchActivity" />
+        <activity android:name=".detailpage.DetailsActivity"/>
         <activity android:name=".LoginActivity" />
         <activity android:name=".ProfileActivity"/>
-        <activity android:name=".TopicActivity"/>
+        <activity android:name=".topicpage.TopicActivity"/>
+        <activity android:name=".topicdetailpage.TopicDetailActivity"
+            android:theme="@style/Transparent"/>
+        <activity android:name=".bookmarkpage.BookmarkActivity"/>
+        <activity android:name=".HistoryActivity"/>
     </application>
 
 </manifest>

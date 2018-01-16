@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/small">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/normal">
+
+            <ImageView
+                android:id="@+id/img_news"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:src="@drawable/book"
+                android:scaleType="fitXY"/>
+
+            <TextView
+                android:id="@+id/tv_news"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_news"
+                android:text="George Weah đắc cử Tổng thống Liberia."
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/mini"
+                android:textAppearance="@style/TextAppearance.FontArsenalRegular"/>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>

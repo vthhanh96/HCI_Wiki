@@ -17,13 +17,10 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             app:collapsedTitleGravity="left"
-            app:contentScrim="@color/colorPrimary"
+            app:contentScrim="#00bbd3"
             app:expandedTitleGravity="left|bottom"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
-            android:fitsSystemWindows="true"
-            app:collapsedTitleTextAppearance="@style/title_text_style"
-            app:expandedTitleTextAppearance="@style/title_text_style"
-            app:title="Book">
+            android:fitsSystemWindows="true">
 
             <FrameLayout
                 android:layout_width="match_parent"
@@ -37,11 +34,6 @@
                     android:contentDescription="@null"
                     android:src="@drawable/book"
                     app:layout_collapseMode="pin"/>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#80000000"/>
             </FrameLayout>
 
             <android.support.v7.widget.Toolbar
@@ -67,16 +59,56 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.FontArsenalBold"
+                android:text="Book"
+                android:paddingStart="@dimen/normal"
+                android:paddingEnd="@dimen/normal"
+                android:paddingTop="@dimen/small"
+                android:paddingBottom="@dimen/small"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/tv_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.FontArsenalItalic"
+                android:text="A lot of book, A lot of book, A lot of book, A lot of book, A lot of book, A lot of book."
+                android:textSize="16sp"
+                android:layout_marginStart="@dimen/normal"
+                android:layout_marginEnd="@dimen/normal"/>
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="3dp"
+                android:background="@color/black"
+                android:layout_margin="@dimen/normal"/>
+
+            <TextView
                 android:id="@+id/tv_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/normal"
+                android:layout_marginStart="@dimen/normal"
+                android:layout_marginEnd="@dimen/normal"
+                android:layout_marginBottom="@dimen/normal"
                 android:textColor="@color/black"
-                android:textAppearance="@style/TextAppearance.FontCenturySchoolbookRegular"/>
+                android:textAppearance="@style/TextAppearance.FontPlayFairDisplayRegular"/>
+
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:background="@color/black"/>
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/normal"
+        app:layout_anchor="@id/app_bar_layout"
+        app:layout_anchorGravity="bottom|end"
+        app:srcCompat="@drawable/ic_bookmark_not_save" />
 </android.support.design.widget.CoordinatorLayout>

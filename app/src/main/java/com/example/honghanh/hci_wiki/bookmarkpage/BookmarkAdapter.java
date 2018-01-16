@@ -1,11 +1,11 @@
-package com.example.honghanh.hci_wiki.adapter;
+package com.example.honghanh.hci_wiki.bookmarkpage;
 
 import android.content.Context;
 import android.net.Uri;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,7 +17,10 @@ import com.example.honghanh.hci_wiki.storage.model.Data;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BookmarkAdapter extends BaseAdapter{
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.BookmarkHolder>{
 
     private List<Data> mList;
     private Context mContext;
@@ -40,46 +43,40 @@ public class BookmarkAdapter extends BaseAdapter{
         mContext = context;
     }
 
+
     @Override
-    public int getCount() {
-        return mList.size();
+    public BookmarkHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        return new BookmarkHolder(LayoutInflater.from(mContext).inflate(R.layout.item_bookmark, parent, false));
     }
 
     @Override
-    public Object getItem(int position) {
-        return mList.get(position);
-    }
-
-    @Override
-    public long getItemId(int position) {
-        return position;
-    }
-
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
-        BookmarkHolder viewHolder;
-        if(convertView == null) {
-            viewHolder = new BookmarkHolder();
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.item_bookmark, parent, false);
-            viewHolder.imgBookmark = (ImageView) convertView.findViewById(R.id.img_bookmark);
-            viewHolder.tvTitle = (TextView) convertView.findViewById(R.id.tv_title);
-            convertView.setTag(viewHolder);
-        } else {
-            viewHolder = (BookmarkHolder) convertView.getTag();
-        }
-
+    public void onBindViewHolder(BookmarkHolder holder, int position) {
         Data data = mList.get(position);
 
-        viewHolder.tvTitle.setText(data.getTitle());
+        holder.tvTitle.setText(data.getTitle());
+        holder.tvBriefContent.setText(data.getContent());
 
         String uriImage = Constants.PATH_ASSETS_FILE + data.getImage();
-        Glide.with(mContext).load(Uri.parse(uriImage)).into(viewHolder.imgBookmark);
+        Glide.with(mContext).load(Uri.parse(uriImage)).into(holder.imgBookmark);
 
-        return convertView;
     }
 
-    class BookmarkHolder {
+    @Override
+    public int getItemCount() {
+        return mList == null ? 0 : mList.size();
+    }
+
+    class BookmarkHolder extends RecyclerView.ViewHolder{
+        @Bind(R.id.img_bookmark)
         ImageView imgBookmark;
+        @Bind(R.id.tv_title)
         TextView tvTitle;
+        @Bind(R.id.tv_brief_content)
+        TextView tvBriefContent;
+
+        public BookmarkHolder(View itemView) {
+            super(itemView);
+            ButterKnife.bind(this, itemView);
+        }
     }
 }

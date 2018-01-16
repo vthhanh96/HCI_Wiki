@@ -1,4 +1,4 @@
-package com.example.honghanh.hci_wiki;
+package com.example.honghanh.hci_wiki.detailpage;
 
 import android.content.Context;
 import android.content.Intent;
@@ -7,6 +7,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +20,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.honghanh.hci_wiki.R;
+import com.example.honghanh.hci_wiki.searchpage.SearchActivity;
 import com.example.honghanh.hci_wiki.storage.model.Data;
 import com.yalantis.contextmenu.lib.ContextMenuDialogFragment;
 import com.yalantis.contextmenu.lib.MenuObject;
@@ -49,17 +52,16 @@ public class DetailsActivity extends AppCompatActivity implements OnMenuItemClic
     Toolbar toolbar;
     @Bind(R.id.app_bar_layout)
     AppBarLayout appBarLayout;
+    @Bind(R.id.fab_bookmark)
+    FloatingActionButton fabBookmark;
 
     private Data data;
     private ContextMenuDialogFragment mMenuDialogFragment;
+    private boolean isSaved = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/century_school_book-regular.otf")
-                .setFontAttrId(R.attr.fontPath)
-                .build());
         setContentView(R.layout.activity_details);
         ButterKnife.bind(this);
         setUpToolbar();
@@ -69,7 +71,7 @@ public class DetailsActivity extends AppCompatActivity implements OnMenuItemClic
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
                 if (Math.abs(verticalOffset) == appBarLayout.getTotalScrollRange()) {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-                        toolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                        toolbar.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                     }
                 } else if (toolbar.getBackground() != null) {
                     toolbar.setBackgroundColor(Color.TRANSPARENT);
@@ -79,6 +81,7 @@ public class DetailsActivity extends AppCompatActivity implements OnMenuItemClic
 
         initData();
         initMenuMore();
+        initListener();
     }
 
     private void setUpToolbar() {
@@ -99,7 +102,7 @@ public class DetailsActivity extends AppCompatActivity implements OnMenuItemClic
         }
 
         if (data != null) {
-            collapsingToolbar.setTitle(data.getTitle());
+            collapsingToolbar.setTitle(" ");
             tvContent.setText(data.getContent());
             try {
                 InputStream inputStream = getAssets().open(data.getImage());
@@ -161,6 +164,16 @@ public class DetailsActivity extends AppCompatActivity implements OnMenuItemClic
         return menuObjects;
     }
 
+    private void initListener() {
+        fabBookmark.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isSaved = !isSaved;
+                fabBookmark.setImageResource(isSaved ? R.drawable.ic_bookmark_saved : R.drawable.ic_bookmark_not_save);
+            }
+        });
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -177,9 +190,6 @@ public class DetailsActivity extends AppCompatActivity implements OnMenuItemClic
             case R.id.action_search:
                 Intent intent = new Intent(DetailsActivity.this, SearchActivity.class);
                 startActivity(intent);
-                break;
-            case R.id.action_page:
-                Toast.makeText(this, "Function coming soon!", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.action_more:
                 mMenuDialogFragment.show(getSupportFragmentManager(), ContextMenuDialogFragment.TAG);
