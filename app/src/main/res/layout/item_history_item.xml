@@ -13,8 +13,7 @@
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_marginEnd="@dimen/normal"
-            android:layout_marginStart="@dimen/normal"
-            android:src="@drawable/dessert" />
+            android:layout_marginStart="@dimen/normal" />
 
         <TextView
             android:id="@+id/tv_history_title"

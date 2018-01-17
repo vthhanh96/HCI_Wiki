@@ -94,7 +94,7 @@
                 android:layout_marginEnd="@dimen/normal"
                 android:layout_marginBottom="@dimen/normal"
                 android:textColor="@color/black"
-                android:textAppearance="@style/TextAppearance.FontPlayFairDisplayRegular"/>
+                android:textAppearance="@style/TextAppearance.FontBodyText"/>
 
             <View
                 android:layout_width="match_parent"

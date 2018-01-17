@@ -45,4 +45,8 @@
         <item name="fontPath">fonts/playfair_display_regular.ttf</item>
     </style>
 
+    <style name="TextAppearance.FontBodyText" parent="android:TextAppearance">
+        <item name="fontPath">fonts/Maitree-Regular.ttf</item>
+    </style>
+
 </resources>

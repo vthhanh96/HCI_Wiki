@@ -36,6 +36,7 @@
             android:textColor="@color/white"
             android:layout_marginStart="@dimen/normal"
             android:layout_marginEnd="@dimen/normal"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textAppearance="@style/TextAppearance.FontArsenalBold"/>
     </LinearLayout>
 </RelativeLayout>

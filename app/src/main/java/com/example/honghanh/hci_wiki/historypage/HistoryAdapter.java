@@ -65,7 +65,7 @@ public class HistoryAdapter extends SectioningAdapter {
         History item = mList.get(sectionIndex);
         HistoryItemViewHolder holder = (HistoryItemViewHolder) viewHolder;
         holder.tvTitle.setText(item.getListHistory().get(itemIndex).getTitle());
-        Glide.with(mContext).load(item.getListHistory().get(itemIndex).getImage());
+        Glide.with(mContext).load(item.getListHistory().get(itemIndex).getImage()).into(holder.imgHistory);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

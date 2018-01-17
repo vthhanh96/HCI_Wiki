@@ -171,7 +171,7 @@
                                     android:layout_height="wrap_content"
                                     android:textSize="12sp"
                                     android:maxLines="4"
-                                    android:textAppearance="@style/TextAppearance.FontPlayFairDisplayRegular"
+                                    android:textAppearance="@style/TextAppearance.FontBodyText"
                                     android:text="A computing platform is the environment in which a piece of software is executed. It may be the hardware or the operating system (OS), even a web browser or other underlying software, as long as the program code is executed in it."/>
                             </LinearLayout>
                         </LinearLayout>

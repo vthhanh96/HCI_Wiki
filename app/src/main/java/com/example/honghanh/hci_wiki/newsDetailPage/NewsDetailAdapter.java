@@ -46,7 +46,7 @@ public class NewsDetailAdapter extends RecyclerView.Adapter<NewsDetailAdapter.Ne
         Spanned content = Html.fromHtml(mList.get(position).getContent());
         holder.tvShortContent.setText(content);
         holder.tvShortContent.setTextSize(30);
-        Typeface typeface = Typeface.createFromAsset(mContext.getAssets(), "fonts/playfair_display_regular.ttf");
+        Typeface typeface = Typeface.createFromAsset(mContext.getAssets(), "fonts/Maitree-Regular.ttf");
         holder.tvShortContent.setTypeface(typeface);
     }
 

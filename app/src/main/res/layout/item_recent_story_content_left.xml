@@ -41,7 +41,7 @@
                         android:maxLines="3"
                         android:textColor="@color/black"
                         android:textSize="14sp"
-                        android:textAppearance="@style/TextAppearance.FontPlayFairDisplayRegular"/>
+                        android:textAppearance="@style/TextAppearance.FontBodyText"/>
                 </LinearLayout>
 
                 <TextView

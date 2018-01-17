@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+//import com.andexert.library.RippleView;
 import com.bumptech.glide.Glide;
 import com.example.honghanh.hci_wiki.R;
 import com.example.honghanh.hci_wiki.storage.model.News;

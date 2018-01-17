@@ -114,7 +114,7 @@
                                     android:gravity="end"
                                     android:text="Văn Hồng Hà"
                                     android:textColor="@color/black"
-                                    android:textAppearance="@style/TextAppearance.FontPlayFairDisplayRegular"/>
+                                    android:textAppearance="@style/TextAppearance.FontBodyText"/>
                             </LinearLayout>
 
                             <View
@@ -146,7 +146,7 @@
                                     android:gravity="end"
                                     android:text="honghaa8@gmail.com"
                                     android:textColor="@color/black"
-                                    android:textAppearance="@style/TextAppearance.FontPlayFairDisplayRegular"/>
+                                    android:textAppearance="@style/TextAppearance.FontBodyText"/>
                             </LinearLayout>
 
                             <View
@@ -178,7 +178,7 @@
                                     android:gravity="end"
                                     android:text="fb.com/vhha1996"
                                     android:textColor="@color/black"
-                                    android:textAppearance="@style/TextAppearance.FontPlayFairDisplayRegular"/>
+                                    android:textAppearance="@style/TextAppearance.FontBodyText"/>
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
