@@ -26,7 +26,7 @@
         <activity android:name=".topicdetailpage.TopicDetailActivity"
             android:theme="@style/Transparent"/>
         <activity android:name=".bookmarkpage.BookmarkActivity"/>
-        <activity android:name=".HistoryActivity"/>
+        <activity android:name=".historypage.HistoryActivity"/>
     </application>
 
 </manifest>

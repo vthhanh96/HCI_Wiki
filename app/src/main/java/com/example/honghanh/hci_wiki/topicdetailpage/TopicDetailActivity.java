@@ -20,7 +20,10 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.honghanh.hci_wiki.R;
+import com.example.honghanh.hci_wiki.bookmarkpage.BookmarkActivity;
+import com.example.honghanh.hci_wiki.detailpage.DetailsActivity;
 import com.example.honghanh.hci_wiki.searchpage.SearchActivity;
+import com.example.honghanh.hci_wiki.storage.model.Data;
 import com.example.honghanh.hci_wiki.widgets.CustomViewTopBar;
 
 import butterknife.Bind;
@@ -28,6 +31,7 @@ import butterknife.ButterKnife;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 import static android.view.View.GONE;
+import static com.example.honghanh.hci_wiki.Constants.KEY_CONTENT_DATA;
 import static com.example.honghanh.hci_wiki.Constants.PACKAGE;
 
 public class TopicDetailActivity extends AppCompatActivity {
@@ -58,6 +62,8 @@ public class TopicDetailActivity extends AppCompatActivity {
     private int leftDelta;
     private int topDelta;
     private ColorDrawable bgColor;
+
+    private RecentStoriesAdapter mAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -113,10 +119,23 @@ public class TopicDetailActivity extends AppCompatActivity {
             }
         });
         tvTopic.setText(desc);
+
+        mAdapter = new RecentStoriesAdapter(this);
+
         rcvTopic.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         rcvTopic.setHasFixedSize(true);
-        rcvTopic.setAdapter(new RecentStoriesAdapter(this));
+        rcvTopic.setAdapter(mAdapter);
         rcvTopic.setNestedScrollingEnabled(false);
+
+        mAdapter.setOnItemClickListener(new RecentStoriesAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(TopicDetailActivity.this, DetailsActivity.class);
+                Data data = new Data("Book", "book.jpg", getString(R.string.book_content));
+                intent.putExtra(KEY_CONTENT_DATA, data);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

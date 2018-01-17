@@ -20,6 +20,15 @@ import java.util.List;
 public class RecentStoriesAdapter extends RecyclerView.Adapter<RecentStoriesAdapter.RecentContentLeft> {
     private Context mContext;
     private List<Data> mList;
+    private OnItemClickListener mListener;
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
+    }
+
+    interface OnItemClickListener{
+        void onItemClick(int position);
+    }
 
     public RecentStoriesAdapter(Context context) {
         mList = new ArrayList<>();
@@ -39,11 +48,20 @@ public class RecentStoriesAdapter extends RecyclerView.Adapter<RecentStoriesAdap
     }
 
     @Override
-    public void onBindViewHolder(RecentContentLeft holder, int position) {
+    public void onBindViewHolder(RecentContentLeft holder, final int position) {
         holder.tvTitle.setText(mList.get(position).getTitle());
         holder.tvBriefContent.setText(mList.get(position).getContent());
         String uriImage = Constants.PATH_ASSETS_FILE + mList.get(position).getImage();
         Glide.with(mContext).load(Uri.parse(uriImage)).into(holder.imgRecent);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mListener != null) {
+                    mListener.onItemClick(position);
+                }
+            }
+        });
     }
 
     @Override

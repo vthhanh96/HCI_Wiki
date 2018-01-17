@@ -24,6 +24,15 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.Bookma
 
     private List<Data> mList;
     private Context mContext;
+    private OnItemClickListener mListener;
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
+    }
+
+    interface OnItemClickListener {
+        void onItemClick(int position);
+    }
 
     public BookmarkAdapter(Context context) {
         mList = new ArrayList<>();
@@ -50,7 +59,7 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.Bookma
     }
 
     @Override
-    public void onBindViewHolder(BookmarkHolder holder, int position) {
+    public void onBindViewHolder(BookmarkHolder holder, final int position) {
         Data data = mList.get(position);
 
         holder.tvTitle.setText(data.getTitle());
@@ -59,6 +68,14 @@ public class BookmarkAdapter extends RecyclerView.Adapter<BookmarkAdapter.Bookma
         String uriImage = Constants.PATH_ASSETS_FILE + data.getImage();
         Glide.with(mContext).load(Uri.parse(uriImage)).into(holder.imgBookmark);
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mListener != null) {
+                    mListener.onItemClick(position);
+                }
+            }
+        });
     }
 
     @Override

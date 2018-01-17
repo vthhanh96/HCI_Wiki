@@ -4,7 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.View;
+import android.widget.LinearLayout;
 
+import com.example.honghanh.hci_wiki.bookmarkpage.BookmarkActivity;
+import com.example.honghanh.hci_wiki.historypage.HistoryActivity;
+import com.example.honghanh.hci_wiki.searchpage.SearchActivity;
 import com.example.honghanh.hci_wiki.widgets.CustomViewTopBar;
 
 import butterknife.Bind;
@@ -17,6 +22,12 @@ import static com.example.honghanh.hci_wiki.Constants.NAV_DRAWER_ID_PROFILE;
 public class ProfileActivity extends DrawerActivity {
     @Bind(R.id.top_bar)
     CustomViewTopBar topBar;
+
+    @Bind(R.id.ll_bookmark)
+    LinearLayout llBookmark;
+
+    @Bind(R.id.ll_history)
+    LinearLayout llHistory;
 
     @Override
     protected int getLayoutId() {
@@ -57,7 +68,24 @@ public class ProfileActivity extends DrawerActivity {
 
             @Override
             public void onRightClick() {
+                Intent intent = new Intent(ProfileActivity.this, SearchActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        llBookmark.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, BookmarkActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        llHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProfileActivity.this, HistoryActivity.class);
+                startActivity(intent);
             }
         });
     }

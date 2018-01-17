@@ -22,6 +22,15 @@ public class StoriesAdapter extends RecyclerView.Adapter<StoriesAdapter.StoriesH
 
     private List<Story> mList;
     private Context mContext;
+    private OnItemClickListener mListener;
+
+    interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        mListener = listener;
+    }
 
     public StoriesAdapter(List<Story> list, Context context) {
         this.mList = list;
@@ -34,9 +43,18 @@ public class StoriesAdapter extends RecyclerView.Adapter<StoriesAdapter.StoriesH
     }
 
     @Override
-    public void onBindViewHolder(StoriesHolder holder, int position) {
+    public void onBindViewHolder(StoriesHolder holder, final int position) {
         holder.tvTitle.setText(mList.get(position).getTitle());
         Glide.with(mContext).load(mList.get(position).getImage()).into(holder.imgStory);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mListener != null) {
+                    mListener.onItemClick(position);
+                }
+            }
+        });
     }
 
     @Override

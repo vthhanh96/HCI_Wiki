@@ -11,12 +11,15 @@ import android.view.ViewTreeObserver;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.honghanh.hci_wiki.DrawerActivity;
 import com.example.honghanh.hci_wiki.R;
+import com.example.honghanh.hci_wiki.detailpage.DetailsActivity;
 import com.example.honghanh.hci_wiki.searchpage.SearchActivity;
 import com.example.honghanh.hci_wiki.newsDetailPage.NewsDetailActivity;
+import com.example.honghanh.hci_wiki.storage.model.Data;
 import com.example.honghanh.hci_wiki.storage.model.Story;
 
 import java.util.ArrayList;
@@ -26,6 +29,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
+import static com.example.honghanh.hci_wiki.Constants.KEY_CONTENT_DATA;
 import static com.example.honghanh.hci_wiki.Constants.NAV_DRAWER_ID_HOME_PAGE;
 
 public class MainActivity extends DrawerActivity {
@@ -46,8 +50,11 @@ public class MainActivity extends DrawerActivity {
     RecyclerView rcvNews;
     @Bind(R.id.rcv_trending)
     RecyclerView rcvTrending;
+    @Bind(R.id.ll_continue_reading)
+    LinearLayout llContinueReading;
 
     private NewsAdapter mNewsAdapter;
+    private StoriesAdapter mTrendingAdapter;
 
     @Override
     protected int getLayoutId() {
@@ -104,7 +111,9 @@ public class MainActivity extends DrawerActivity {
         listTrending.add(new Story("Carles Puigdemont", R.drawable.carles_puigdemont));
         listTrending.add(new Story("Technology", R.drawable.technology));
 
-        rcvTrending.setAdapter(new StoriesAdapter(listTrending, this));
+        mTrendingAdapter = new StoriesAdapter(listTrending, this);
+
+        rcvTrending.setAdapter(mTrendingAdapter);
         rcvTrending.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         rcvNews.setNestedScrollingEnabled(true);
     }
@@ -129,6 +138,26 @@ public class MainActivity extends DrawerActivity {
             @Override
             public void onItemClick(int position) {
                 Intent intent = new Intent(MainActivity.this, NewsDetailActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mTrendingAdapter.setOnItemClickListener(new StoriesAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Data data = new Data("Book", "book.jpg", getString(R.string.book_content));
+                Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
+                intent.putExtra(KEY_CONTENT_DATA, data);
+                startActivity(intent);
+            }
+        });
+
+        llContinueReading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Data data = new Data("Book", "book.jpg", getString(R.string.book_content));
+                Intent intent = new Intent(MainActivity.this, DetailsActivity.class);
+                intent.putExtra(KEY_CONTENT_DATA, data);
                 startActivity(intent);
             }
         });

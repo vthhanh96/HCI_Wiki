@@ -9,13 +9,16 @@ import android.support.v7.widget.RecyclerView;
 
 import com.example.honghanh.hci_wiki.DrawerActivity;
 import com.example.honghanh.hci_wiki.R;
+import com.example.honghanh.hci_wiki.detailpage.DetailsActivity;
 import com.example.honghanh.hci_wiki.searchpage.SearchActivity;
+import com.example.honghanh.hci_wiki.storage.model.Data;
 import com.example.honghanh.hci_wiki.widgets.CustomViewTopBar;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
+import static com.example.honghanh.hci_wiki.Constants.KEY_CONTENT_DATA;
 import static com.example.honghanh.hci_wiki.Constants.NAV_DRAWER_ID_BOOKMARK_PAGE;
 
 
@@ -25,6 +28,8 @@ public class BookmarkActivity extends DrawerActivity {
     CustomViewTopBar topBar;
     @Bind(R.id.rcv_bookmark)
     RecyclerView rcvBookmark;
+
+    private BookmarkAdapter mAdapter;
 
     @Override
     protected int getLayoutId() {
@@ -55,7 +60,9 @@ public class BookmarkActivity extends DrawerActivity {
         topBar.setImageViewRight(CustomViewTopBar.DRAWABLE_SEARCH);
         topBar.setTitle("Bookmark");
 
-        rcvBookmark.setAdapter(new BookmarkAdapter(this));
+        mAdapter = new BookmarkAdapter(this);
+
+        rcvBookmark.setAdapter(mAdapter);
         rcvBookmark.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         rcvBookmark.setNestedScrollingEnabled(false);
     }
@@ -70,6 +77,16 @@ public class BookmarkActivity extends DrawerActivity {
             @Override
             public void onRightClick() {
                 Intent intent = new Intent(BookmarkActivity.this, SearchActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mAdapter.setOnItemClickListener(new BookmarkAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(BookmarkActivity.this, DetailsActivity.class);
+                Data data = new Data("Book", "book.jpg", getString(R.string.book_content));
+                intent.putExtra(KEY_CONTENT_DATA, data);
                 startActivity(intent);
             }
         });

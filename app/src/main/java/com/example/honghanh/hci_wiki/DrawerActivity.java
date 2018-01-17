@@ -11,6 +11,7 @@ import android.view.Gravity;
 
 import com.example.honghanh.hci_wiki.adapter.MenuAdapter;
 import com.example.honghanh.hci_wiki.bookmarkpage.BookmarkActivity;
+import com.example.honghanh.hci_wiki.historypage.HistoryActivity;
 import com.example.honghanh.hci_wiki.homepage.MainActivity;
 import com.example.honghanh.hci_wiki.topicpage.TopicActivity;
 
