@@ -25,6 +25,15 @@ public class NewsDetailAdapter extends RecyclerView.Adapter<NewsDetailAdapter.Ne
 
     private Context mContext;
     private List<Data> mList;
+    private OnItemCLickListener mListener;
+
+    public void setOnItemCLickListener(OnItemCLickListener listener) {
+        mListener = listener;
+    }
+
+    interface OnItemCLickListener {
+        void onItemClick(int position);
+    }
 
     public NewsDetailAdapter(Context context) {
         mContext = context;
@@ -41,13 +50,22 @@ public class NewsDetailAdapter extends RecyclerView.Adapter<NewsDetailAdapter.Ne
     }
 
     @Override
-    public void onBindViewHolder(NewsDetailHolder holder, int position) {
+    public void onBindViewHolder(NewsDetailHolder holder, final int position) {
         holder.tvTitle.setText(mList.get(position).getTitle());
         Spanned content = Html.fromHtml(mList.get(position).getContent());
         holder.tvShortContent.setText(content);
         holder.tvShortContent.setTextSize(30);
         Typeface typeface = Typeface.createFromAsset(mContext.getAssets(), "fonts/Maitree-Regular.ttf");
         holder.tvShortContent.setTypeface(typeface);
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mListener != null) {
+                    mListener.onItemClick(position);
+                }
+            }
+        });
     }
 
     @Override

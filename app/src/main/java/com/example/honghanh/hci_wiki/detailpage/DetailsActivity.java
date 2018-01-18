@@ -80,7 +80,7 @@ public class DetailsActivity extends AppCompatActivity implements OnMenuItemClic
         });
 
         initData();
-        initMenuMore();
+        //initMenuMore();
         initListener();
     }
 
@@ -190,9 +190,6 @@ public class DetailsActivity extends AppCompatActivity implements OnMenuItemClic
             case R.id.action_search:
                 Intent intent = new Intent(DetailsActivity.this, SearchActivity.class);
                 startActivity(intent);
-                break;
-            case R.id.action_more:
-                mMenuDialogFragment.show(getSupportFragmentManager(), ContextMenuDialogFragment.TAG);
                 break;
         }
         return super.onOptionsItemSelected(item);

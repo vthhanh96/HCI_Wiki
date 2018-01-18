@@ -187,7 +187,7 @@
             android:layout_height="wrap_content"
             android:theme="@style/top_bar_style">
 
-            <LinearLayout
+            <FrameLayout
                 android:id="@+id/top_bar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -207,15 +207,16 @@
                     android:layout_gravity="center_vertical"/>
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Wikie"
                     android:textColor="@color/white"
                     android:textSize="20sp"
                     android:layout_marginStart="@dimen/small"
                     android:layout_marginEnd="@dimen/small"
+                    android:layout_gravity="center"
                     android:textAppearance="@style/TextAppearance.FontArsenalBold"/>
-            </LinearLayout>
+            </FrameLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"

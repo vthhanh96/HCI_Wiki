@@ -12,11 +12,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.honghanh.hci_wiki.R;
+import com.example.honghanh.hci_wiki.detailpage.DetailsActivity;
 import com.example.honghanh.hci_wiki.searchpage.SearchActivity;
+import com.example.honghanh.hci_wiki.storage.model.Data;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
+import static com.example.honghanh.hci_wiki.Constants.KEY_CONTENT_DATA;
 
 public class NewsDetailActivity extends AppCompatActivity {
 
@@ -31,6 +35,8 @@ public class NewsDetailActivity extends AppCompatActivity {
 
     @Bind(R.id.img_search)
     ImageView imgSearch;
+
+    private NewsDetailAdapter mAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -48,7 +54,10 @@ public class NewsDetailActivity extends AppCompatActivity {
     }
 
     private void initData() {
-        rcvNewsDetail.setAdapter(new NewsDetailAdapter(this));
+
+        mAdapter = new NewsDetailAdapter(this);
+
+        rcvNewsDetail.setAdapter(mAdapter);
         rcvNewsDetail.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
         rcvNewsDetail.setHasFixedSize(true);
     }
@@ -65,6 +74,16 @@ public class NewsDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(NewsDetailActivity.this, SearchActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mAdapter.setOnItemCLickListener(new NewsDetailAdapter.OnItemCLickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Intent intent = new Intent(NewsDetailActivity.this, DetailsActivity.class);
+                Data data = new Data("Book", "book.jpg", getString(R.string.book_content));
+                intent.putExtra(KEY_CONTENT_DATA, data);
                 startActivity(intent);
             }
         });
