@@ -222,11 +222,11 @@
                                 android:id="@+id/ll_bookmark"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/white"
                                 android:paddingBottom="@dimen/normal"
                                 android:paddingEnd="@dimen/large"
                                 android:paddingStart="@dimen/large"
-                                android:paddingTop="@dimen/normal">
+                                android:paddingTop="@dimen/normal"
+                                android:background="?android:attr/selectableItemBackground">
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -254,11 +254,11 @@
                                 android:id="@+id/ll_history"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@color/white"
                                 android:paddingBottom="@dimen/normal"
                                 android:paddingEnd="@dimen/large"
                                 android:paddingStart="@dimen/large"
-                                android:paddingTop="@dimen/normal">
+                                android:paddingTop="@dimen/normal"
+                                android:background="?android:attr/selectableItemBackground">
 
                                 <TextView
                                     android:layout_width="wrap_content"

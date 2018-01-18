@@ -143,12 +143,14 @@
                             android:layout_marginStart="@dimen/normal"
                             android:layout_marginEnd="@dimen/normal"
                             android:layout_marginTop="@dimen/small"
-                            android:layout_marginBottom="@dimen/small">
+                            android:layout_marginBottom="@dimen/small"
+                            android:background="?android:attr/selectableItemBackground">
 
                             <ImageView
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="5"
+                                android:scaleType="fitXY"
                                 android:src="@drawable/video_game"/>
 
                             <LinearLayout
@@ -156,7 +158,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_weight="8"
                                 android:orientation="vertical"
-                                android:layout_margin="@dimen/small">
+                                android:layout_marginStart="@dimen/small"
+                                android:layout_marginEnd="@dimen/small">
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -170,7 +173,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:textSize="12sp"
-                                    android:maxLines="4"
+                                    android:maxLines="3"
                                     android:textAppearance="@style/TextAppearance.FontBodyText"
                                     android:text="A computing platform is the environment in which a piece of software is executed. It may be the hardware or the operating system (OS), even a web browser or other underlying software, as long as the program code is executed in it."/>
                             </LinearLayout>

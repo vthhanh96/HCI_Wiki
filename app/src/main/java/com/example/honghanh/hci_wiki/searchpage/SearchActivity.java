@@ -49,6 +49,18 @@ public class SearchActivity extends AppCompatActivity {
     //trending search
     @Bind(R.id.trending_search_container)
     CardView trendingSearchContainer;
+    @Bind(R.id.tv_javascript)
+    TextView tvJavascript;
+    @Bind(R.id.tv_c_sharp)
+    TextView tvCSharp;
+    @Bind(R.id.tv_c_plus_plus)
+    TextView tvCPlusPlus;
+    @Bind(R.id.tv_java)
+    TextView tvJava;
+    @Bind(R.id.tv_html)
+    TextView tvHTML;
+    @Bind(R.id.tv_css)
+    TextView tvCSS;
 
     //results
     @Bind(R.id.results_container)
@@ -164,6 +176,48 @@ public class SearchActivity extends AppCompatActivity {
                 Intent intent = new Intent(SearchActivity.this, DetailsActivity.class);
                 intent.putExtra(KEY_CONTENT_DATA, mListSearchData.get(position));
                 startActivity(intent);
+            }
+        });
+
+        tvJavascript.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edtSearch.setText("Javascript");
+            }
+        });
+
+        tvCSharp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edtSearch.setText("C#");
+            }
+        });
+
+        tvCPlusPlus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edtSearch.setText("C++");
+            }
+        });
+
+        tvJava.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edtSearch.setText("Java");
+            }
+        });
+
+        tvHTML.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edtSearch.setText("HTML5");
+            }
+        });
+
+        tvCSS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                edtSearch.setText("CSS");
             }
         });
     }

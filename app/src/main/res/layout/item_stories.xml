@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/small"
-    android:layout_marginEnd="@dimen/small">
+    android:layout_marginEnd="@dimen/small"
+    android:background="?android:attr/selectableItemBackground">
 
     <ImageView
         android:id="@+id/img_story"
