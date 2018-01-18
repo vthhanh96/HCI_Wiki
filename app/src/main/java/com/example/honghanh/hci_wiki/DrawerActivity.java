@@ -58,7 +58,7 @@ public abstract class DrawerActivity extends AppCompatActivity {
         mMenuList.add(new ItemMenu(NAV_DRAWER_ID_HOME_PAGE, "Home", R.drawable.ic_home, getNavId() == NAV_DRAWER_ID_HOME_PAGE));
         mMenuList.add(new ItemMenu(NAV_DRAWER_ID_BOOKMARK_PAGE, "Bookmark", R.drawable.ic_bookmark, getNavId() == NAV_DRAWER_ID_BOOKMARK_PAGE));
         mMenuList.add(new ItemMenu(NAV_DRAWER_ID_HISTORY_PAGE, "History", R.drawable.ic_history, getNavId() == NAV_DRAWER_ID_HISTORY_PAGE));
-        mMenuList.add(new ItemMenu(NAV_DRAWER_ID_TOPIC, "Topic", R.drawable.ic_settings, getNavId() == NAV_DRAWER_ID_TOPIC));
+        mMenuList.add(new ItemMenu(NAV_DRAWER_ID_TOPIC, "Topic", R.drawable.ic_topic, getNavId() == NAV_DRAWER_ID_TOPIC));
         mMenuList.add(new ItemMenu(NAV_DRAWER_ID_PROFILE, "Profile", R.drawable.ic_profile, getNavId() == NAV_DRAWER_ID_PROFILE));
     }
 
